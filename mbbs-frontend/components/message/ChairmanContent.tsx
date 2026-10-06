@@ -21,7 +21,7 @@ export const ChairmanContent = () => {
             Dr. Mohan Alva
           </h4>
           <p className="font-['Outfit'] text-slate-500 text-sm mt-0.5">
-            Chairman, Alva&apos;s Institute of Medical Sciences and Research Centre.
+            Chairman, Alva&apos;s Education Foundation.
           </p>
         </div>
       </div>

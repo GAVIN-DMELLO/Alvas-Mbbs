@@ -12,6 +12,10 @@ export const ChairmanSection = () => {
         {/* Right Column: Heading, Message, Signature & CTA */}
         <ChairmanContent />
       </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 lg:mt-24">
+        <hr className="w-full border-t-2 border-slate-300" />
+      </div>
     </section>
   );
 };
