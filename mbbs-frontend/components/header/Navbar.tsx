@@ -13,7 +13,7 @@ export const Navbar = () => {
   ];
 
   return (
-    <nav className="w-full bg-white border-b border-gray-200 px-6 py-3 sticky top-0 z-40 shadow-sm">
+    <nav className="w-full bg-slate-900/30 backdrop-blur-md border-b border-white/10 px-6 py-4 absolute top-0 left-0 z-50">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         
         {/* Logo Image Placeholder */}
@@ -24,10 +24,10 @@ export const Navbar = () => {
             className="h-10 w-auto object-contain"
           />
           <div className="flex flex-col">
-            <span className="text-slate-900 font-extrabold text-xs sm:text-sm tracking-tight leading-tight uppercase">
+            <span className="text-white font-extrabold text-xs sm:text-sm tracking-tight leading-tight uppercase font-mono">
               Alva's Institute of Medical Sciences
             </span>
-            <span className="text-[10px] text-slate-500 font-semibold tracking-wider uppercase">
+            <span className="text-[10px] text-[#b48a55] font-semibold tracking-wider uppercase font-mono">
               and Research Centre
             </span>
           </div>
@@ -40,7 +40,7 @@ export const Navbar = () => {
             <a
               key={link.label}
               href={link.href}
-              className="text-[13px] font-semibold tracking-wider uppercase text-slate-800 hover:text-[#234767] transition-all duration-200 hover:-translate-y-0.5 inline-block"
+              className="text-[13px] font-semibold tracking-wider uppercase text-[#b48a55] hover:text-white transition-all duration-200 hover:-translate-y-0.5 inline-block font-mono"
             >
               {link.label}
             </a>
