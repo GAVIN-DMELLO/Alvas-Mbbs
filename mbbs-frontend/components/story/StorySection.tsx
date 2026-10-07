@@ -1,10 +1,10 @@
 // components/story/StorySection.jsx
-import { StoryImage } from './StoryImage';
+// import { StoryImage } from './StoryImage';
 import { StoryContent } from './StoryContent';
 
 export const StorySection = () => {
   return (
-    <section className="relative w-full py-16 lg:py-24 overflow-hidden bg-slate-900 text-white">
+    <section className="relative w-full py-16 lg:py-24 overflow-hidden bg-slate-900 text-white pr-12">
       {/* Background Image with a Lighter, Balanced Institutional Blue Tint */}
       <div className="absolute inset-0 z-0">
         <img
@@ -20,7 +20,7 @@ export const StorySection = () => {
       {/* Main Content Container */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
         {/* Left Column: Floating Accent Card */}
-        <StoryImage />
+        {/* <StoryImage /> */}
 
         {/* Right Column: Heading, Text & CTA */}
         <StoryContent />

@@ -3,7 +3,7 @@ import { Text } from '@/components/ui/Text';
 
 export const StoryContent = () => {
   return (
-    <div className="w-full lg:w-7/12 flex flex-col justify-center space-y-6">
+    <div className="w-full lg:w-7/12 flex flex-col justify-center space-y-6 ">
       {/* Eyebrow Tag with Golden Glow Accent */}
       <div>
         <span className="inline-block font-mono font-bold text-xs sm:text-sm tracking-widest text-amber-300 uppercase bg-[#ffddb6]/20 px-3 py-1 rounded-full border border-[#ffddb6] shadow-[0_0_10px_rgba(255,221,182,0.5)]">
