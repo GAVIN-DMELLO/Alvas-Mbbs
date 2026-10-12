@@ -6,7 +6,7 @@ export const Header = () => {
   return (
     <header className="w-full sticky top-0 z-50 shadow-md">
       {/* Top contact & accreditation strip */}
-      <UtilityBar />
+      {/* <UtilityBar /> */}
 
       {/* Main navigation and brand bar */}
       <Navbar />

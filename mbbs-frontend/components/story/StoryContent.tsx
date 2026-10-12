@@ -18,12 +18,12 @@ export const StoryContent = () => {
       </h2>
 
       {/* Body Paragraph 1: Changed to bright off-white slate-100 and mapped to font-lora */}
-      <p className="font-mono text-slate-100 text-base sm:text-lg leading-relaxed">
+      <p className="font-sans text-slate-100 text-base sm:text-lg leading-relaxed">
         Alva&apos;s Institute of Medical Sciences and Research Centre (AIMSRC) was established in 2026 as a proud unit of Alva&apos;s Education Foundation, carrying forward a rich legacy of service, compassion, and academic excellence.
       </p>
 
       {/* Body Paragraph 2: Changed to bright off-white slate-100 and mapped to font-lora */}
-      <p className="font-lora text-slate-100 text-base sm:text-lg leading-relaxed">
+      <p className="font-sans text-slate-100 text-base sm:text-lg leading-relaxed">
         Our journey is deeply rooted in the remarkable 40-year history of Alva&apos;s Health Centre, a trusted name in healthcare that has served generations with dedication and integrity.
       </p>
 

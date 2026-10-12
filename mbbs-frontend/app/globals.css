@@ -2,6 +2,6 @@
 
 @theme {
   --font-display: var(--font-space-grotesk), sans-serif;
-  --font-lora: var(--font-lora), serif;
   --font-mono: var(--font-jetbrains-mono), monospace;
+  --font-sans: var(--font-inter), sans-serif;
 }

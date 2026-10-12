@@ -4,8 +4,8 @@ import { ChairmanContent } from './ChairmanContent';
 
 export const ChairmanSection = () => {
   return (
-    <section className="relative w-full bg-white py-16 lg:py-24 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+    <section className="relative w-full py-16 lg:py-24 overflow-hidden bg-[#234767]/10">
+      <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
         {/* Left Column: Chairman Portrait */}
         <ChairmanImage />
 
