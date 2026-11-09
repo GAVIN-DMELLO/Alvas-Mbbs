@@ -1,26 +1,21 @@
-// components/hero/HeroActions.jsx
+// components/hero/HeroActions.tsx
+"use client";
 
-export const HeroActions = () => {
+import { motion } from "framer-motion";
+
+export const HeroActions = ({ isReady = false }: { isReady?: boolean }) => {
   return (
-    <div className="flex items-center justify-start w-full max-w-4xl px-0 mt-6">
-      <button
-        className="
-          inline-flex items-center justify-center
-          px-6 py-3 rounded-xl
-          bg-[#ffddb6] text-[#0B1F3A]
-          font-semibold tracking-wide
-          shadow-[0_10px_30px_rgba(0,0,0,0.25)]
-          hover:brightness-110 hover:shadow-[0_14px_40px_rgba(0,0,0,0.30)]
-          active:translate-y-[1px]
-          transition
-          focus:outline-none focus:ring-2 focus:ring-[#D9A441]/70 focus:ring-offset-2 focus:ring-offset-[#0B1F3A]
-        "
+    <motion.div 
+      initial={{ x: -120, opacity: 0 }}
+      animate={isReady ? { x: 0, opacity: 1 } : { x: -120, opacity: 0 }}
+      transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as const, delay: 0.4 }}
+      className="flex items-center justify-start w-full max-w-4xl px-0 mt-2"
+    >
+      <button 
+        className="inline-flex items-center justify-center px-8 py-3.5 rounded-sm bg-white text-black font-bold tracking-widest text-sm uppercase hover:bg-gray-200 transition-colors focus:outline-none" 
       >
-        EXPLORE ADMISSIONS
+        Admissions &amp; Aid
       </button>
-    </div>
+    </motion.div>
   );
 };
-
-
-// #ffddb6

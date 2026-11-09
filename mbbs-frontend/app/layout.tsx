@@ -1,6 +1,6 @@
 // app/layout.tsx
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk, Lora, JetBrains_Mono } from "next/font/google";
+import { Inter, Space_Grotesk, Lora, JetBrains_Mono, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 
 // 1. Initialize all fonts
@@ -28,6 +28,13 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
+const ibmPlexMono = IBM_Plex_Mono({
+  variable: "--font-ibm-plex-mono",
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Alva's Institute of Medical Sciences and Research Centre",
   description: "A Centre of Excellence in Medical Education, Research & Healthcare Delivery",
@@ -37,8 +44,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
-      // Safely included lora.variable here alongside the others so nothing breaks!
-      className={`${inter.variable} ${lora.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} h-full antialiased`}
+      className={`${inter.variable} ${lora.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} ${ibmPlexMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">{children}</body>
     </html>

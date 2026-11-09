@@ -1,5 +1,4 @@
 // components/hero/HeroBadge.jsx
-
 export const HeroBadge = ({ logoSrc = "/logo_home.png" }) => {
   return (
     <div className="w-full max-w-5xl px-0 pt-6 pb-4">
@@ -19,8 +18,6 @@ export const HeroBadge = ({ logoSrc = "/logo_home.png" }) => {
         {/* Gold affiliation line */}
         <div className="flex items-center gap-3 text-[#ffddb6] font-medium text-xs sm:text-sm tracking-wider uppercase">
           
-
-        
         </div>
       </div>
     </div>

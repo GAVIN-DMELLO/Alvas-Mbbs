@@ -5,7 +5,7 @@ export const StoryImage = () => {
     <div className="w-full lg:w-5/12 flex justify-center lg:justify-start">
       <div className="w-full max-w-md lg:max-w-none overflow-hidden rounded-2xl">
         <img
-          src="/logo_black.jpeg"
+          src="/banner-7.jpg"
           alt="Alva's Institute Campus"
           className="w-full h-auto object-cover"
           onError={(e) => {

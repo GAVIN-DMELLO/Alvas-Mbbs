@@ -1,15 +1,13 @@
 // components/header/Header.tsx
-import { UtilityBar } from '@/components/header/UtilityBar';
+"use client";
+
 import { Navbar } from '@/components/header/Navbar';
 
-export const Header = () => {
+export const Header = ({ isReady = false }: { isReady?: boolean }) => {
   return (
-    <header className="w-full sticky top-0 z-50 shadow-md">
-      {/* Top contact & accreditation strip */}
-      {/* <UtilityBar /> */}
-
+    <header className="w-full sticky top-0 z-50">
       {/* Main navigation and brand bar */}
-      <Navbar />
+      <Navbar isReady={isReady} />
     </header>
   );
 };
