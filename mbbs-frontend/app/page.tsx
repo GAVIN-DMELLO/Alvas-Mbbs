@@ -1,12 +1,12 @@
 'use client';
 
 import { useState } from 'react';
-import { Header } from '../components/header/Header';
 import { HeroSection } from '@/components/hero/HeroSection';
+import { ImpactStatsSection } from '@/components/impact/ImpactStatsSection';
 import { ChairmanSection } from '@/components/message/ChairmanSection';
-import { FooterSection } from '@/components/footer/FooterSection';
-import { StorySection } from '@/components/story/StorySection';
+// import { StorySection } from '@/components/story/StorySection';
 import { DepartmentsSection } from '@/components/departments/DepartmentsSection';
+import { NewsSection } from '@/components/news/NewsSection';
 import Preloader from '@/components/preloader/PreLoader';
 
 export default function Home() {
@@ -15,12 +15,14 @@ export default function Home() {
   return (
     <>
       <Preloader onComplete={() => setIsPreloaderDone(true)} />
-      <Header isReady={isPreloaderDone} />
       <HeroSection isReady={isPreloaderDone} />
+      <ImpactStatsSection />
       <ChairmanSection />
+      {/* Our Story section commented out as of now
       <StorySection />
+      */}
       <DepartmentsSection />
-      <FooterSection />
+      <NewsSection />
     </>
   );
 }

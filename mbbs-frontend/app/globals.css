@@ -6,3 +6,43 @@
   --font-ibm-mono: var(--font-ibm-plex-mono), monospace;
   --font-sans: var(--font-inter), sans-serif;
 }
+
+/* Departments marquee — continuous horizontal scroll */
+@keyframes marquee-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-right {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-marquee-left {
+  animation: marquee-left 48s linear infinite;
+}
+
+.animate-marquee-right {
+  animation: marquee-right 48s linear infinite;
+}
+
+/* Pause the rows while the visitor hovers a card */
+.marquee-group:hover .animate-marquee-left,
+.marquee-group:hover .animate-marquee-right {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee-left,
+  .animate-marquee-right {
+    animation: none;
+  }
+}

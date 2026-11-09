@@ -1,43 +1,35 @@
 // components/chairman/ChairmanImage.jsx
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 
 export const ChairmanImage = ({ imageSrc = "/Chairman.jpeg", altText = "Dr. Mohan Alva" }) => {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
     <motion.div 
-      // 1. SLIDE IN FROM LEFT
-      initial={{ opacity: 0, x: -60 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true, amount: 0.3 }} // Triggers when 30% of the image is visible
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      className="w-full lg:w-5/12 flex justify-center"
+      initial={shouldReduceMotion ? false : { opacity: 0, y: 18 }}
+      whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.25 }}
+      transition={{
+        duration: shouldReduceMotion ? 0 : 0.75,
+        ease: [0.22, 1, 0.36, 1],
+      }}
+      className="relative aspect-[4/3] w-full overflow-hidden bg-[#173a56] lg:aspect-auto lg:min-h-[560px] lg:w-[42%]"
     >
-      {/* Floating animation container with golden glow */}
-      <div className="p-3 bg-white border border-[#ffddb6] shadow-[0_0_20px_rgba(255,221,182,0.6)] rounded-sm animate-float">
-        <img 
-          src={imageSrc} 
-          alt={altText}
-          className="w-full h-auto object-cover max-h-[450px]"
-        />
-      </div>
-
-      {/* Inline style for the smooth floating keyframe animation */}
-      <style jsx>{`
-        @keyframes float {
-          0%, 100% {
-            transform: translateY(0px);
-            box-shadow: 0 0 15px rgba(255, 221, 182, 0.5);
-          }
-          50% {
-            transform: translateY(-8px);
-            box-shadow: 0 0 25px rgba(255, 221, 182, 0.8);
-          }
-        }
-        .animate-float {
-          animation: float 4s ease-in-out infinite;
-        }
-      `}</style>
+      <img
+        src={imageSrc}
+        alt={altText}
+        className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-700 hover:scale-[1.03]"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-gradient-to-t from-[#102b43]/45 via-transparent to-[#102b43]/10"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute bottom-0 left-0 top-0 w-1.5 bg-[#ffddb6]/80"
+      />
     </motion.div>
   );
 };

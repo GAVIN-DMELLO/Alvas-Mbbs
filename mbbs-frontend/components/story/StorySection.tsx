@@ -1,28 +1,20 @@
-// components/story/StorySection.jsx
-// import { StoryImage } from './StoryImage';
+// components/story/StorySection.tsx
 import { StoryContent } from './StoryContent';
 
 export const StorySection = () => {
   return (
-    <section className="relative w-full py-16 lg:py-24 overflow-hidden bg-slate-900 text-white pr-12">
-      {/* Background Image with a Lighter, Balanced Institutional Blue Tint */}
+    <section className="relative isolate w-full overflow-hidden bg-[#102b43] py-16 sm:py-20 lg:py-28">
       <div className="absolute inset-0 z-0">
         <img
-          src="/banner-4.jpg"
-          alt="Alva's Institute Campus Background"
-          className="w-full h-full object-cover object-center"
+          src="/banner-7.jpg"
+          alt=""
+          className="h-full w-full object-cover object-center"
         />
-        {/* Soighter blue shade overlay so the campus photo remains visible and bright */}
-        <div className="absolute inset-0 bg-[#0f2942]/60 backdrop-blur-[1px]" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0b1f33]/70 via-[#0f2942]/50 to-[#0b1f33]/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0b1f33]/45 via-[#0f2942]/20 to-[#0b1f33]/35" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0b1f33]/35 via-transparent to-[#0b1f33]/10" />
       </div>
 
-      {/* Main Content Container */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-        {/* Left Column: Floating Accent Card */}
-        {/* <StoryImage /> */}
-
-        {/* Right Column: Heading, Text & CTA */}
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <StoryContent />
       </div>
     </section>

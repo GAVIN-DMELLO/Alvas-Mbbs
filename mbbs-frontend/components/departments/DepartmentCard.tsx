@@ -1,58 +1,28 @@
-// components/departments/DepartmentCard.jsx
+// components/departments/DepartmentCard.tsx
+type DepartmentCardProps = {
+  index: number;
+  name: string;
+};
 
-export const DepartmentCard = ({ 
-  badge = "Clinical Speciality", 
-  title, 
-  description, 
-  imageSrc 
-}) => {
+export const DepartmentCard = ({ index, name }: DepartmentCardProps) => {
   return (
-    <div className="group relative bg-white border border-slate-200 hover:border-amber-500/60 rounded-xl p-6 sm:p-8 transition-all duration-300 shadow-sm hover:shadow-md">
-      <div className="flex flex-col sm:flex-row gap-6 items-start">
-        
-        {/* Card Text Content */}
-        <div className="flex-1 flex flex-col justify-between">
-          <div>
-            {/* Monospace Badge Token */}
-            <span className="inline-block text-amber-700 bg-amber-50 font-mono text-xs tracking-wider uppercase px-3 py-1 rounded-md mb-4 border border-amber-200/50">
-              {badge}
-            </span>
+    <div className="group relative mr-5 flex h-44 w-64 shrink-0 flex-col justify-between overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-amber-300/60 hover:bg-white/[0.07] hover:shadow-[0_22px_45px_-22px_rgba(245,180,80,0.55)]">
+      {/* Soft gold glow accent */}
+      <span className="pointer-events-none absolute -right-8 -top-8 h-24 w-24 rounded-full bg-amber-300/10 blur-2xl transition-colors duration-300 group-hover:bg-amber-300/25" />
 
-            {/* Department Title */}
-            <h3 className="font-display text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight group-hover:text-amber-700 transition-colors">
-              {title}
-            </h3>
+      {/* Department number */}
+      <span className="relative font-mono text-xs font-semibold tracking-[0.25em] text-amber-300/80">
+        {String(index).padStart(2, "0")}
+      </span>
 
-            {/* Description Paragraph */}
-            <p className="mt-3 text-slate-600 font-mono text-xs sm:text-sm leading-relaxed">
-              {description}
-            </p>
-          </div>
-
-          {/* Action Link */}
-          <div className="mt-6">
-            <a 
-              href="#explore" 
-              className="inline-flex items-center gap-2 text-xs font-mono tracking-wide uppercase text-amber-700 hover:underline font-semibold"
-            >
-              <span>Explore Department</span>
-              <span>&rarr;</span>
-            </a>
-          </div>
-        </div>
-
-        {/* Thumbnail Image */}
-        {imageSrc && (
-          <div className="w-full sm:w-48 h-36 rounded-lg overflow-hidden border border-slate-200 shrink-0">
-            <img 
-              src={imageSrc} 
-              alt={title} 
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              onError={(e) => { e.target.src = "https://placehold.co/400x300?text=Department"; }}
-            />
-          </div>
-        )}
-
+      <div className="relative">
+        <h3 className="font-display text-lg font-semibold leading-snug text-white">
+          {name}
+        </h3>
+        <span className="mt-3 inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.2em] text-white/45 transition-colors duration-300 group-hover:text-amber-200">
+          Explore Department
+          <span aria-hidden="true">&rarr;</span>
+        </span>
       </div>
     </div>
   );
