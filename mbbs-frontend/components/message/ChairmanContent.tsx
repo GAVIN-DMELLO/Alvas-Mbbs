@@ -78,7 +78,7 @@ export const ChairmanContent = () => {
 
       <motion.div variants={itemVariants}>
         <motion.a
-          href="/chairman-message"
+          href="/about/chairman-message"
           whileHover={shouldReduceMotion ? undefined : { x: 4 }}
           whileTap={shouldReduceMotion ? undefined : { scale: 0.98 }}
           transition={{ type: "spring", stiffness: 360, damping: 24 }}

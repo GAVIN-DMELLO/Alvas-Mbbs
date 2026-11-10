@@ -2,6 +2,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface DropdownItem {
@@ -21,6 +22,7 @@ export const Navbar = ({ isReady = false }: { isReady?: boolean }) => {
   const [isNavHovered, setIsNavHovered] = useState(false);
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
   const [activeLink, setActiveLink] = useState<string>("Admissions");
+  const router = useRouter();
 
   useEffect(() => {
     if (isReady) {
@@ -42,7 +44,7 @@ export const Navbar = ({ isReady = false }: { isReady?: boolean }) => {
   const navLinks: NavLink[] = [
     {
       label: "About",
-      href: "#About",
+      href: "/about",
       hasDropdown: true,
       dropdownItems: [
         { label: "About college", href: "/about" },
@@ -57,96 +59,39 @@ export const Navbar = ({ isReady = false }: { isReady?: boolean }) => {
     },
     {
       label: "Admissions",
-      href: "#admissions",
-      hasDropdown: true,
-      dropdownItems: [
-        { label: "MBBS Program", href: "#mbbs-program" },
-        { label: "MD / MS Admissions", href: "#md-ms-admissions" },
-        { label: "MD-PhD Program", href: "#md-phd-program" },
-        { label: "Master's Degree Programs", href: "#masters-programs" },
-        { label: "PhD Degree Programs", href: "#phd-programs" },
-        {
-          label: "Professional, Corporate, and Continuing Education",
-          href: "#continuing-education",
-        },
-        { label: "Fee Structure & Scholarships", href: "#scholarships" },
-        { label: "Registrar", href: "#registrar" },
-        { label: "Graduation", href: "#graduation" },
-        { label: "Health Info", href: "#health-info" },
-      ],
+      href: "/admissions",
+      hasDropdown: false,
     },
     {
       label: "Student Portal",
-      href: "#student-portal",
+      href: "/programs?tab=academic",
       hasDropdown: true,
       dropdownItems: [
-        { label: "Student LMS Login", href: "#lms-login" },
-        { label: "Academic Calendar", href: "#academic-calendar" },
-        { label: "Examination & Results", href: "#exam-results" },
-        { label: "Digital Library & Journals", href: "#digital-library" },
-        { label: "Hostel & Campus Life", href: "#hostel-life" },
-        { label: "Student Council & Clubs", href: "#student-council" },
-        { label: "Anti-Ragging Cell", href: "#anti-ragging" },
-        { label: "Alumni Network", href: "#alumni" },
+        { label: "Academic", href: "/programs?tab=academic" },
+        { label: "Rules & Regulations", href: "/programs?tab=rules-and-regulations" },
+        { label: "Campus Facilities", href: "/programs?tab=facilities" },
+        { label: "Committees", href: "/programs?tab=committees" },
       ],
     },
     {
       label: "Departments",
-      href: "#departments",
-      hasDropdown: true,
-      dropdownItems: [
-        { label: "Pre-Clinical Departments", href: "#pre-clinical" },
-        { label: "Para-Clinical Departments", href: "#para-clinical" },
-        { label: "General Medicine & Allied", href: "#general-medicine" },
-        { label: "General Surgery & Allied", href: "#general-surgery" },
-        { label: "Obstetrics & Gynaecology", href: "#obg" },
-        { label: "Paediatrics & Neonatology", href: "#paediatrics" },
-        { label: "Central Research Lab", href: "#research-lab" },
-        { label: "Medical Education Unit", href: "#meu" },
-      ],
+      href: "/departments",
+      hasDropdown: false,
     },
     {
       label: "Hospital",
-      href: "#hospital",
-      hasDropdown: true,
-      dropdownItems: [
-        { label: "Outpatient (OPD) Services", href: "#opd" },
-        { label: "Inpatient (IPD) & Wards", href: "#ipd" },
-        { label: "24/7 Emergency & Trauma", href: "#emergency" },
-        { label: "ICU & Critical Care Units", href: "#critical-care" },
-        { label: "Diagnostics & Radiology", href: "#diagnostics" },
-        { label: "Blood Bank & Pathology", href: "#blood-bank" },
-        { label: "Community Health Outreach", href: "#community-health" },
-        { label: "Health Insurance & Schemes", href: "#insurance" },
-      ],
+      href: "/hospital",
+      hasDropdown: false,
     },
     {
       label: "Happenings@AIMSARC",
-      href: "#happenings",
-      hasDropdown: true,
-      dropdownItems: [
-        { label: "Latest News & Notices", href: "#news" },
-        { label: "CME & Medical Conferences", href: "#conferences" },
-        { label: "Workshops & Seminars", href: "#workshops" },
-        { label: "Research Publications", href: "#publications" },
-        { label: "Annual Cultural & Sports Meet", href: "#cultural-events" },
-        { label: "Photo & Video Gallery", href: "#gallery" },
-        { label: "Press Releases", href: "#press" },
-      ],
+      href: "/campus-life",
+      hasDropdown: false,
     },
     {
       label: "Contact Us",
-      href: "#Contact-Us",
-      hasDropdown: true,
-      dropdownItems: [
-        { label: "General Enquiry", href: "#enquiry" },
-        { label: "Admissions Office", href: "#admissions-office" },
-        { label: "Hospital Helpline", href: "#helpline" },
-        { label: "Department Directory", href: "#directory" },
-        { label: "Location & Campus Map", href: "#campus-map" },
-        { label: "Careers & Faculty Openings", href: "#careers" },
-        { label: "Feedback & Grievances", href: "#feedback" },
-      ],
+      href: "/contact",
+      hasDropdown: false,
     },
   ];
 
@@ -173,7 +118,12 @@ export const Navbar = ({ isReady = false }: { isReady?: boolean }) => {
       <div className="max-w-[95rem] mx-auto flex justify-between items-center gap-6 lg:gap-8 w-full">
         {/* Brand Logo & Title */}
         <motion.a
-          href="#"
+          href="/"
+          onClick={(event) => {
+            event.preventDefault();
+            router.push("/");
+          }}
+          aria-label="Alva's Institute of Medical Sciences and Research Centre — Home"
           className="flex items-center gap-3.5 group shrink-0 outline-none focus:outline-none focus:ring-0 select-none"
           whileHover={{ scale: 1.01 }}
           whileTap={{ scale: 0.99 }}

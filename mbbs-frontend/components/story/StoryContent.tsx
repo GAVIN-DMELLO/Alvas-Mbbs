@@ -24,7 +24,7 @@ export const StoryContent = () => {
 
       <div className="pt-7">
         <a 
-          href="/about-us" 
+          href="/about/about-alvas" 
           className="group inline-flex items-center gap-3 rounded-full bg-[#234767] px-6 py-3.5 font-mono text-xs font-semibold uppercase tracking-[0.12em] text-white shadow-[0_10px_24px_rgba(35,71,103,0.18)] transition-all duration-300 hover:bg-[#173a56] sm:px-7"
         >
           Read More 

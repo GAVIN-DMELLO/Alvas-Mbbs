@@ -13,14 +13,14 @@ export const FooterDirections = () => {
           width="100%"
           height="170"
           style={{ border: 0, filter: "grayscale(30%) contrast(1.05)" }}
-          allowFullScreen=""
+          allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
         <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-black/20" />
       </div>
       <a
-        href="https://maps.google.com"
+        href="https://www.google.com/maps/search/?api=1&query=13.018361,74.969028"
         target="_blank"
         rel="noopener noreferrer"
         className="inline-flex items-center justify-center gap-2 rounded-lg border border-amber-300/40 bg-amber-300/10 px-4 py-2.5 text-sm font-semibold text-amber-200 transition-all duration-300 hover:bg-amber-300/20"

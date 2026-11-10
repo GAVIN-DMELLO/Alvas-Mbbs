@@ -1,29 +1,17 @@
 // components/departments/DepartmentsSection.tsx
-import { DepartmentMarquee } from "./DepartmentMarquee";
+import { DepartmentMarquee, type MarqueeDepartment } from "./DepartmentMarquee";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { DEPARTMENTS } from "@/lib/departments";
 
-const departments = [
-  "Anaesthesiology",
-  "Anatomy",
-  "Biochemistry",
-  "Community Medicine",
-  "Dentistry",
-  "Dermatology",
-  "ENT",
-  "Forensic Medicine",
-  "General Medicine",
-  "General Surgery",
-  "Microbiology",
-  "Obstetrics & Gynaecology",
-  "Ophthalmology",
-  "Orthopaedics",
-  "Paediatrics",
-  "Pathology",
-  "Pharmacology",
-  "Physiology",
-  "Psychiatry",
-  "Radiology",
-];
+// Home page copy keeps the "&" for Obstetrics & Gynaecology.
+const DISPLAY_NAMES: Record<string, string> = {
+  "obstetrics-and-gynaecology": "Obstetrics & Gynaecology",
+};
+
+const departments: MarqueeDepartment[] = DEPARTMENTS.map((department) => ({
+  slug: department.slug,
+  name: DISPLAY_NAMES[department.slug] ?? department.name,
+}));
 
 const half = Math.ceil(departments.length / 2);
 const rowOne = departments.slice(0, half);

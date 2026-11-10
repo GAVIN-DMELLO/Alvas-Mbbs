@@ -1,8 +1,13 @@
 // components/departments/DepartmentMarquee.tsx
 import { DepartmentCard } from "./DepartmentCard";
 
+export type MarqueeDepartment = {
+  name: string;
+  slug: string;
+};
+
 type DepartmentMarqueeProps = {
-  departments: string[];
+  departments: MarqueeDepartment[];
   startIndex: number;
   direction?: "left" | "right";
 };
@@ -22,11 +27,12 @@ export const DepartmentMarquee = ({
           direction === "left" ? "animate-marquee-left" : "animate-marquee-right"
         }`}
       >
-        {track.map((name, i) => (
+        {track.map((department, i) => (
           <DepartmentCard
-            key={`${name}-${i}`}
+            key={`${department.slug}-${i}`}
             index={startIndex + (i % departments.length)}
-            name={name}
+            name={department.name}
+            slug={department.slug}
           />
         ))}
       </div>

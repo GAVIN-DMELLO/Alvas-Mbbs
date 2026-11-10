@@ -38,6 +38,9 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://www.aimsarc.org",
+  ),
   title: "Alva's Institute of Medical Sciences and Research Centre",
   description: "A Centre of Excellence in Medical Education, Research & Healthcare Delivery",
 };
