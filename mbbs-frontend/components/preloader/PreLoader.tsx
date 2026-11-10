@@ -1,23 +1,39 @@
 // components/preloader/PreLoader.tsx
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import Image from "next/image";
 
-// The preloader is a first-visit experience only. The flag lives in
-// sessionStorage, so it plays on the very first load of a session and never
-// again on client-side navigations or reloads within that same session.
-const PRELOADER_SESSION_KEY = "alvas:preloader-played";
+// The preloader belongs to a single document load. A module-level flag lives
+// in memory for as long as the page is open, so it survives client-side
+// navigation (the user never sees the preloader twice while browsing) but it
+// is reset by a hard reload, where the preloader should play again.
+let hasPlayedInThisDocument = false;
 
 type PreloaderPhase = "pending" | "running" | "finished";
 
+// Layout effects run before the browser paints, so the "skip" decision is made
+// without the curtain ever being visible. useLayoutEffect warns during SSR,
+// so fall back to useEffect on the server.
+const useIsomorphicLayoutEffect =
+  typeof window !== "undefined" ? useLayoutEffect : useEffect;
+
+// --- choreography -----------------------------------------------------------
+const LOGO_RISE_AT = 100; // logo starts rising almost immediately
+const WORDMARK_AT = 450; // wordmark fades in as the logo settles
+const FILL_START_AT = 700; // colour fill overlaps the logo's arrival
+const FILL_DURATION = 1600; // ms for the logo to fill bottom-to-top
+const FILL_HOLD = 350; // pause on the full logo before the curtain rolls up
+const ROLL_UP = 1000; // ms for the curtain to slide away
+
 export default function Preloader({ onComplete }: { onComplete?: () => void }) {
   const [phase, setPhase] = useState<PreloaderPhase>("pending");
-  const [shrinkBox, setShrinkBox] = useState(false);
   const [slideUpLogo, setSlideUpLogo] = useState(false);
-  const [progress, setProgress] = useState(0);
+  const [showWordmark, setShowWordmark] = useState(false);
+  const [fillDone, setFillDone] = useState(false);
   const [rollUpCurtain, setRollUpCurtain] = useState(false);
 
+  const fillRef = useRef<HTMLImageElement>(null);
   const onCompleteRef = useRef(onComplete);
   // React StrictMode runs mount effects twice in development. Guard the
   // one-time decision so the preloader is not skipped on a genuine first visit.
@@ -28,117 +44,111 @@ export default function Preloader({ onComplete }: { onComplete?: () => void }) {
   }, [onComplete]);
 
   // Decide once, on mount: play the animation or skip straight through.
-  useEffect(() => {
+  // Runs as a layout effect so a skip never flashes the curtain.
+  useIsomorphicLayoutEffect(() => {
     if (decidedRef.current) return;
     decidedRef.current = true;
 
-    let alreadyPlayed = false;
-
-    try {
-      alreadyPlayed =
-        window.sessionStorage.getItem(PRELOADER_SESSION_KEY) === "1";
-    } catch {
-      alreadyPlayed = false;
-    }
-
-    if (alreadyPlayed) {
+    if (hasPlayedInThisDocument) {
+      // Already played during this document (client-side navigation back to
+      // the home page) - reveal the site immediately.
       setPhase("finished");
       onCompleteRef.current?.();
       window.dispatchEvent(new CustomEvent("preloaderComplete"));
       return;
     }
 
-    try {
-      window.sessionStorage.setItem(PRELOADER_SESSION_KEY, "1");
-    } catch {
-      // Storage unavailable (private mode) - the animation still plays.
-    }
-
+    hasPlayedInThisDocument = true;
     setPhase("running");
   }, []);
 
-  // Step 1, 2, 3: Fade In -> Logo Slide Up -> Progress Fill
+  // Step 1, 2, 3: Logo rises -> wordmark fades in -> colour fill sweeps up.
   useEffect(() => {
     if (phase !== "running") return;
 
     document.body.style.overflow = "hidden"; // Lock page scroll while loading
 
-    const fadeInTimer = setTimeout(() => {
-      setShrinkBox(true);
-    }, 80);
+    const logoTimer = setTimeout(() => setSlideUpLogo(true), LOGO_RISE_AT);
+    const wordmarkTimer = setTimeout(() => setShowWordmark(true), WORDMARK_AT);
 
-    const logoTimer = setTimeout(() => {
-      setSlideUpLogo(true);
-    }, 850);
+    let frame = 0;
+    const fillTimer = setTimeout(() => {
+      const start = performance.now();
 
-    let fillInterval: ReturnType<typeof setInterval> | undefined;
-    const startFillTimer = setTimeout(() => {
-      fillInterval = setInterval(() => {
-        setProgress((prev) => {
-          if (prev >= 100) {
-            if (fillInterval) clearInterval(fillInterval);
-            return 100;
-          }
-          return prev + 1;
-        });
-      }, 20);
-    }, 1500);
+      // requestAnimationFrame drives the fill straight from the clock, so the
+      // sweep is perfectly smooth with no transition lag in the middle.
+      const tick = (now: number) => {
+        const next = Math.min(100, ((now - start) / FILL_DURATION) * 100);
+
+        if (fillRef.current) {
+          fillRef.current.style.clipPath = `inset(${100 - next}% 0 0 0)`;
+        }
+
+        if (next < 100) {
+          frame = requestAnimationFrame(tick);
+        } else {
+          setFillDone(true);
+        }
+      };
+
+      frame = requestAnimationFrame(tick);
+    }, FILL_START_AT);
+
+    // Safety net: browsers pause requestAnimationFrame in hidden tabs, so make
+    // sure the preloader still completes even if the page is in the background.
+    const safetyTimer = setTimeout(() => {
+      if (fillRef.current) {
+        fillRef.current.style.clipPath = "inset(0% 0 0 0)";
+      }
+      setFillDone(true);
+    }, FILL_START_AT + FILL_DURATION + 300);
 
     return () => {
-      clearTimeout(fadeInTimer);
       clearTimeout(logoTimer);
-      clearTimeout(startFillTimer);
-      if (fillInterval) clearInterval(fillInterval);
+      clearTimeout(wordmarkTimer);
+      clearTimeout(fillTimer);
+      clearTimeout(safetyTimer);
+      cancelAnimationFrame(frame);
       document.body.style.overflow = "";
     };
   }, [phase]);
 
-  // Step 4: When progress reaches 100%, roll the screen upwards
+  // Step 4: When the logo is fully filled, roll the whole white curtain up
   useEffect(() => {
-    if (phase !== "running" || progress !== 100) return;
+    if (phase !== "running" || !fillDone) return;
 
-    // Pause 300ms at 100% so the user admires the full logo, then roll up
+    // Pause on the full logo, then roll the curtain upwards
     const rollUpTimer = setTimeout(() => {
       setRollUpCurtain(true);
-    }, 300);
+    }, FILL_HOLD);
 
-    // Remove preloader from DOM after the 1000ms roll-up finishes
+    // Remove preloader from DOM once the roll-up finishes
     const doneTimer = setTimeout(() => {
       setPhase("finished");
       document.body.style.overflow = ""; // Unlock scrolling on your main site
       onCompleteRef.current?.();
       window.dispatchEvent(new CustomEvent("preloaderComplete"));
-    }, 1300);
+    }, FILL_HOLD + ROLL_UP);
 
     return () => {
       clearTimeout(rollUpTimer);
       clearTimeout(doneTimer);
     };
-  }, [phase, progress]);
+  }, [phase, fillDone]);
 
   // Completely unmount once the curtain has rolled off-screen
   if (phase === "finished") return null;
 
   return (
+    // The white curtain itself is what rolls up, carrying the logo and the
+    // wordmark with it.
     <div
       aria-hidden={phase === "pending"}
-      className={`fixed inset-0 z-[9999] bg-white transition-opacity duration-300 ${
-        phase === "pending" ? "opacity-0" : "opacity-100"
+      className={`fixed inset-0 z-[9999] bg-white transition-transform duration-1000 ease-[cubic-bezier(0.76,0,0.24,1)] ${
+        rollUpCurtain ? "-translate-y-full" : "translate-y-0"
       }`}
     >
-      <div
-        className={`flex min-h-screen w-full flex-col items-center justify-center transition-transform duration-1000 ease-[cubic-bezier(0.76,0,0.24,1)] ${
-          rollUpCurtain ? "-translate-y-full" : "translate-y-0"
-        }`}
-      >
-      {/* Logo and Text Container */}
-      <div
-        className={`flex flex-col items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-          shrinkBox
-            ? "translate-y-0 opacity-100"
-            : "-translate-y-6 opacity-0"
-        }`}
-      >
+      <div className="flex min-h-screen w-full flex-col items-center justify-center">
         {/* Logo Wrapper */}
         <div
           className={`relative h-[250px] w-[250px] shrink-0 transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
@@ -157,22 +167,23 @@ export default function Preloader({ onComplete }: { onComplete?: () => void }) {
 
           {/* 2. Animated Fill Layer: Original Colors rising from bottom to top */}
           <Image
+            ref={fillRef}
             src="/logo_home.png"
             alt="Logo Fill"
             fill
             priority
             sizes="250px"
-            className="object-contain transition-[clip-path] duration-75 ease-linear"
+            className="object-contain"
             style={{
-              clipPath: `inset(${100 - progress}% 0 0 0)`,
+              clipPath: "inset(100% 0 0 0)",
             }}
           />
         </div>
 
         {/* Institute Name */}
         <div
-          className={`mt-8 text-center transition-opacity duration-700 w-full px-4 ${
-            slideUpLogo ? "opacity-100" : "opacity-0"
+          className={`mt-8 text-center transition-opacity duration-700 ease-out w-full px-4 ${
+            showWordmark ? "opacity-100" : "opacity-0"
           }`}
         >
           <h1 className="text-2xl md:text-3xl font-bold text-blue-900 font-serif tracking-tight">
@@ -186,7 +197,6 @@ export default function Preloader({ onComplete }: { onComplete?: () => void }) {
             compassionate healthcare.
           </p>
         </div>
-      </div>
       </div>
     </div>
   );
