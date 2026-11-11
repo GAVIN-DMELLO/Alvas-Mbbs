@@ -8,7 +8,6 @@ import { motion, AnimatePresence } from "framer-motion";
 interface DropdownItem {
   label: string;
   href: string;
-  description?: string;
 }
 
 interface NavLink {
@@ -23,7 +22,33 @@ export const Navbar = ({ isReady = false }: { isReady?: boolean }) => {
   const [isNavHovered, setIsNavHovered] = useState(false);
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
   const [activeLink, setActiveLink] = useState<string>("Admissions");
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [expandedMobileLink, setExpandedMobileLink] = useState<string | null>(
+    null,
+  );
   const router = useRouter();
+
+  // Lock scrolling and close the mobile menu on Escape
+  useEffect(() => {
+    if (!isMobileMenuOpen) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsMobileMenuOpen(false);
+        setExpandedMobileLink(null);
+      }
+    };
+
+    document.addEventListener("keydown", onKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [isMobileMenuOpen]);
 
   useEffect(() => {
     if (isReady) {
@@ -51,42 +76,34 @@ export const Navbar = ({ isReady = false }: { isReady?: boolean }) => {
         {
           label: "About college",
           href: "/about",
-          description: "Institute overview, history and governance",
         },
         {
           label: "About Alva's",
           href: "/about/about-alvas",
-          description: "The legacy of Alva's Education Foundation",
         },
         {
           label: "Chairman Message",
           href: "/about/chairman-message",
-          description: "A note from Dr. Mohan Alva",
         },
         {
           label: "Dean's Message",
           href: "/about/dean-message",
-          description: "Guidance from the Dean, AIMSARC",
         },
         {
           label: "Superintendent's Message",
           href: "/about/superintendent-message",
-          description: "From the Medical Superintendent",
         },
         {
           label: "Vision & Mission",
           href: "/about/vision-mission",
-          description: "What the institute stands for",
         },
         {
           label: "Code of Conduct",
           href: "/about/code-of-conduct",
-          description: "Standards and expectations on campus",
         },
         {
           label: "Objectives",
           href: "/about/objectives",
-          description: "The goals that guide the institute",
         },
       ],
     },
@@ -103,22 +120,18 @@ export const Navbar = ({ isReady = false }: { isReady?: boolean }) => {
         {
           label: "Academic",
           href: "/programs?tab=academic",
-          description: "Curriculum, teaching and examinations",
         },
         {
           label: "Rules & Regulations",
           href: "/programs?tab=rules-and-regulations",
-          description: "Policies every student follows",
         },
         {
           label: "Campus Facilities",
           href: "/programs?tab=facilities",
-          description: "Labs, library, skills centre and sports",
         },
         {
           label: "Committees",
           href: "/programs?tab=committees",
-          description: "Institutional and academic committees",
         },
       ],
     },
@@ -173,7 +186,7 @@ export const Navbar = ({ isReady = false }: { isReady?: boolean }) => {
             router.push("/");
           }}
           aria-label="Alva's Institute of Medical Sciences and Research Centre — Home"
-          className="flex items-center gap-3.5 group shrink-0 outline-none focus:outline-none focus:ring-0 select-none"
+          className="flex min-w-0 items-center gap-3.5 group outline-none focus:outline-none focus:ring-0 select-none lg:shrink-0"
           whileHover={{ scale: 1.01 }}
           whileTap={{ scale: 0.99 }}
           transition={{ type: "spring", stiffness: 400, damping: 17 }}
@@ -189,7 +202,7 @@ export const Navbar = ({ isReady = false }: { isReady?: boolean }) => {
             <img
               src="/logo_home.png"
               alt="Institution Logo"
-              className="h-[84px] sm:h-[90px] w-auto object-contain transition-all duration-300"
+              className="h-[60px] sm:h-[84px] lg:h-[90px] w-auto object-contain transition-all duration-300"
               style={{
                 filter: isNavHovered
                   ? "drop-shadow(0px 2px 6px rgba(16, 46, 76, 0.22))"
@@ -198,9 +211,9 @@ export const Navbar = ({ isReady = false }: { isReady?: boolean }) => {
             />
           </div>
 
-          <div className="flex flex-col">
+          <div className="flex min-w-0 flex-col">
             <span
-              className={`font-extrabold text-base sm:text-xl leading-tight uppercase font-display tracking-[-0.01em] transition-all duration-300 ${
+              className={`font-extrabold text-[12px] sm:text-base lg:text-xl leading-tight uppercase font-display tracking-[-0.01em] transition-all duration-300 ${
                 isNavHovered
                 ? "text-[#142d44] drop-shadow-[0_1px_8px_rgba(255,255,255,0.95)]"
                 : "text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]"
@@ -209,7 +222,7 @@ export const Navbar = ({ isReady = false }: { isReady?: boolean }) => {
               Alva&apos;s Institute of Medical Sciences
             </span>
             <span
-              className={`text-[12px] sm:text-[13px] font-bold uppercase font-display tracking-[0.06em] transition-all duration-300 ${
+              className={`text-[10px] sm:text-[12px] lg:text-[13px] font-bold uppercase font-display tracking-[0.06em] transition-all duration-300 ${
                 isNavHovered
                   ? "text-[#b98b52] drop-shadow-[0_1px_6px_rgba(255,255,255,0.95)]"
                   : "text-white/90 drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]"
@@ -333,19 +346,12 @@ export const Navbar = ({ isReady = false }: { isReady?: boolean }) => {
                                   setActiveLink(link.label);
                                   setHoveredLink(null);
                                 }}
-                                className={`group flex items-center justify-between gap-4 px-5 py-3.5 transition-colors duration-200 hover:bg-[#fbf7f1] ${
+                                className={`group flex items-center justify-between gap-4 px-5 py-3 transition-colors duration-200 hover:bg-[#fbf7f1] ${
                                   itemIndex > 0 ? "border-t border-slate-100" : ""
                                 }`}
                               >
-                                <span className="min-w-0">
-                                  <span className="block font-display text-[15px] font-semibold text-[#142d44] transition-colors duration-200 group-hover:text-[#a7773f]">
-                                    {item.label}
-                                  </span>
-                                  {item.description && (
-                                    <span className="mt-1 block text-[12px] leading-snug text-slate-500">
-                                      {item.description}
-                                    </span>
-                                  )}
+                                <span className="min-w-0 font-display text-[15px] font-semibold text-[#142d44] transition-colors duration-200 group-hover:text-[#a7773f]">
+                                  {item.label}
                                 </span>
 
                                 <span
@@ -365,7 +371,155 @@ export const Navbar = ({ isReady = false }: { isReady?: boolean }) => {
             );
           })}
         </div>
+
+        {/* Mobile menu trigger */}
+        <button
+          type="button"
+          aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isMobileMenuOpen}
+          onClick={() => {
+            setIsMobileMenuOpen((open) => !open);
+            setExpandedMobileLink(null);
+          }}
+          className="lg:hidden grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-white/15 bg-white/10 backdrop-blur transition-colors duration-200 hover:bg-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#b98b52]/60"
+        >
+          <span aria-hidden="true" className="flex flex-col items-center justify-center gap-[5px]">
+            <span
+              className={`block h-[2px] w-5 rounded-full bg-white transition-transform duration-300 ${
+                isMobileMenuOpen ? "translate-y-[7px] rotate-45" : ""
+              }`}
+            />
+            <span
+              className={`block h-[2px] w-5 rounded-full bg-white transition-opacity duration-200 ${
+                isMobileMenuOpen ? "opacity-0" : ""
+              }`}
+            />
+            <span
+              className={`block h-[2px] w-5 rounded-full bg-white transition-transform duration-300 ${
+                isMobileMenuOpen ? "-translate-y-[7px] -rotate-45" : ""
+              }`}
+            />
+          </span>
+        </button>
       </div>
+
+      {/* Mobile menu */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <>
+            <motion.button
+              type="button"
+              aria-label="Close menu"
+              onClick={() => setIsMobileMenuOpen(false)}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="fixed inset-0 z-40 h-full w-full cursor-default bg-[#0b1e36]/60 backdrop-blur-sm lg:hidden"
+            />
+
+            <motion.div
+              initial={{ opacity: 0, y: -12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -12 }}
+              transition={{ duration: 0.22, ease: "easeOut" }}
+              className="absolute inset-x-0 top-full z-50 max-h-[calc(100vh-4.5rem)] overflow-y-auto rounded-b-2xl border-t border-[#b98b52]/20 bg-white shadow-[0_30px_70px_-24px_rgba(11,30,54,0.55)] lg:hidden"
+            >
+              <nav className="px-3 py-2">
+                {navLinks.map((link) => (
+                  <div
+                    key={link.label}
+                    className="border-b border-slate-100 last:border-b-0"
+                  >
+                    {link.hasDropdown && link.dropdownItems ? (
+                      <>
+                        <button
+                          type="button"
+                          aria-expanded={expandedMobileLink === link.label}
+                          onClick={() =>
+                            setExpandedMobileLink((current) =>
+                              current === link.label ? null : link.label,
+                            )
+                          }
+                          className="flex w-full items-center justify-between gap-3 px-3 py-3.5 text-left"
+                        >
+                          <span className="font-display text-[15px] font-bold uppercase tracking-[0.05em] text-[#142d44]">
+                            {link.label}
+                          </span>
+                          <span
+                            className={`grid h-7 w-7 shrink-0 place-items-center rounded-full border border-[#234767]/15 text-[#234767] transition-all duration-300 ${
+                              expandedMobileLink === link.label
+                                ? "rotate-180 border-[#b98b52] bg-[#b98b52] text-white"
+                                : ""
+                            }`}
+                          >
+                            <svg
+                              className="h-3 w-3"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                              strokeWidth={2.5}
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M19 9l-7 7-7-7"
+                              />
+                            </svg>
+                          </span>
+                        </button>
+
+                        <AnimatePresence initial={false}>
+                          {expandedMobileLink === link.label && (
+                            <motion.ul
+                              initial={{ height: 0, opacity: 0 }}
+                              animate={{ height: "auto", opacity: 1 }}
+                              exit={{ height: 0, opacity: 0 }}
+                              transition={{ duration: 0.25, ease: "easeOut" }}
+                              className="overflow-hidden"
+                            >
+                              {link.dropdownItems.map((item) => (
+                                <li key={item.label}>
+                                  <a
+                                    href={item.href}
+                                    onClick={() => {
+                                      setActiveLink(link.label);
+                                      setIsMobileMenuOpen(false);
+                                    }}
+                                    className="block rounded-xl px-3 py-2.5 text-[14px] font-semibold text-[#142d44] transition-colors duration-200 hover:bg-[#fbf7f1]"
+                                  >
+                                    {item.label}
+                                  </a>
+                                </li>
+                              ))}
+                            </motion.ul>
+                          )}
+                        </AnimatePresence>
+                      </>
+                    ) : (
+                      <a
+                        href={link.href}
+                        onClick={() => {
+                          setActiveLink(link.label);
+                          setIsMobileMenuOpen(false);
+                        }}
+                        className="flex items-center justify-between gap-3 px-3 py-3.5"
+                      >
+                        <span className="font-display text-[15px] font-bold uppercase tracking-[0.05em] text-[#142d44]">
+                          {link.label}
+                        </span>
+                        <span aria-hidden="true" className="text-sm text-[#b98b52]">
+                          &rarr;
+                        </span>
+                      </a>
+                    )}
+                  </div>
+                ))}
+              </nav>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </motion.nav>
   );
 };
