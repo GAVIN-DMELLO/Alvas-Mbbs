@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 interface DropdownItem {
   label: string;
   href: string;
+  description?: string;
 }
 
 interface NavLink {
@@ -47,14 +48,46 @@ export const Navbar = ({ isReady = false }: { isReady?: boolean }) => {
       href: "/about",
       hasDropdown: true,
       dropdownItems: [
-        { label: "About college", href: "/about" },
-        { label: "About Alva's", href: "/about/about-alvas" },
-        { label: "Chairman Message", href: "/about/chairman-message" },
-        { label: "Dean's Message", href: "/about/dean-message" },
-        { label: "Superintendent's Message", href: "/about/superintendent-message" },
-        { label: "Vision & Mission", href: "/about/vision-mission" },
-        { label: "Code of Conduct", href: "/about/code-of-conduct" },
-        { label: "Objectives", href: "/about/objectives" },
+        {
+          label: "About college",
+          href: "/about",
+          description: "Institute overview, history and governance",
+        },
+        {
+          label: "About Alva's",
+          href: "/about/about-alvas",
+          description: "The legacy of Alva's Education Foundation",
+        },
+        {
+          label: "Chairman Message",
+          href: "/about/chairman-message",
+          description: "A note from Dr. Mohan Alva",
+        },
+        {
+          label: "Dean's Message",
+          href: "/about/dean-message",
+          description: "Guidance from the Dean, AIMSARC",
+        },
+        {
+          label: "Superintendent's Message",
+          href: "/about/superintendent-message",
+          description: "From the Medical Superintendent",
+        },
+        {
+          label: "Vision & Mission",
+          href: "/about/vision-mission",
+          description: "What the institute stands for",
+        },
+        {
+          label: "Code of Conduct",
+          href: "/about/code-of-conduct",
+          description: "Standards and expectations on campus",
+        },
+        {
+          label: "Objectives",
+          href: "/about/objectives",
+          description: "The goals that guide the institute",
+        },
       ],
     },
     {
@@ -67,10 +100,26 @@ export const Navbar = ({ isReady = false }: { isReady?: boolean }) => {
       href: "/programs?tab=academic",
       hasDropdown: true,
       dropdownItems: [
-        { label: "Academic", href: "/programs?tab=academic" },
-        { label: "Rules & Regulations", href: "/programs?tab=rules-and-regulations" },
-        { label: "Campus Facilities", href: "/programs?tab=facilities" },
-        { label: "Committees", href: "/programs?tab=committees" },
+        {
+          label: "Academic",
+          href: "/programs?tab=academic",
+          description: "Curriculum, teaching and examinations",
+        },
+        {
+          label: "Rules & Regulations",
+          href: "/programs?tab=rules-and-regulations",
+          description: "Policies every student follows",
+        },
+        {
+          label: "Campus Facilities",
+          href: "/programs?tab=facilities",
+          description: "Labs, library, skills centre and sports",
+        },
+        {
+          label: "Committees",
+          href: "/programs?tab=committees",
+          description: "Institutional and academic committees",
+        },
       ],
     },
     {
@@ -176,7 +225,9 @@ export const Navbar = ({ isReady = false }: { isReady?: boolean }) => {
           {navLinks.map((link, index) => {
             const isHovered = hoveredLink === link.label;
             const isActive = activeLink === link.label;
-            const showIndicator = isHovered || isActive;
+            // Only one item renders the indicator at a time, otherwise two
+            // elements share the same layoutId and the underline gets stuck.
+            const showIndicator = isActive;
             // Align last 2 dropdowns to the right edge so they don't overflow off the screen
             const alignRight = index >= navLinks.length - 2;
 
@@ -184,7 +235,12 @@ export const Navbar = ({ isReady = false }: { isReady?: boolean }) => {
               <div
                 key={link.label}
                 className="relative"
-                onMouseEnter={() => setHoveredLink(link.label)}
+                onMouseEnter={() => {
+                  setHoveredLink(link.label);
+                  // Move the underline to the last hovered link and keep it
+                  // there after the pointer leaves.
+                  setActiveLink(link.label);
+                }}
                 onMouseLeave={() => setHoveredLink(null)}
               >
                 <a
@@ -235,25 +291,22 @@ export const Navbar = ({ isReady = false }: { isReady?: boolean }) => {
                   )}
 
                   {/* Snug Harvard-style Bottom Bar Indicator */}
-                  <AnimatePresence>
-                    {showIndicator && (
-                      <motion.span
-                        layoutId="harvardNavUnderline"
-                        initial={{ opacity: 0, scaleX: 0.7 }}
-                        animate={{ opacity: 1, scaleX: 1 }}
-                        exit={{ opacity: 0, scaleX: 0.7 }}
-                        transition={{
-                          type: "spring",
-                          stiffness: 450,
-                          damping: 32,
-                        }}
-                        className="absolute bottom-0 left-0 right-0 h-[3.5px] z-20"
-                        style={{
-                          background: isHovered ? "#b98b52" : "#a7773f",
-                        }}
-                      />
-                    )}
-                  </AnimatePresence>
+                  {showIndicator && (
+                    <motion.span
+                      layoutId="harvardNavUnderline"
+                      initial={{ opacity: 0, scaleX: 0.7 }}
+                      animate={{ opacity: 1, scaleX: 1 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 450,
+                        damping: 32,
+                      }}
+                      className="absolute bottom-0 left-0 right-0 h-[3.5px] z-20"
+                      style={{
+                        background: "#b98b52",
+                      }}
+                    />
+                  )}
                 </a>
 
                 {/* Harvard-Style White Dropdown Menu */}
@@ -262,16 +315,17 @@ export const Navbar = ({ isReady = false }: { isReady?: boolean }) => {
                     link.dropdownItems &&
                     isHovered && (
                       <motion.div
-                        initial={{ opacity: 0, y: 6 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 4 }}
-                        transition={{ duration: 0.18, ease: "easeOut" }}
+                        initial={{ opacity: 0, y: 8, scale: 0.98 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: 6, scale: 0.98 }}
+                        transition={{ duration: 0.2, ease: "easeOut" }}
                         className={`absolute top-full ${
                           alignRight ? "right-0" : "left-0"
-                        } w-[265px] bg-white shadow-[0_18px_40px_rgba(0,0,0,0.18)] border border-gray-100 py-5 px-6 z-50`}
+                        } z-50 w-[340px] overflow-hidden rounded-2xl border border-[#b98b52]/25 bg-white shadow-[0_30px_70px_-24px_rgba(11,30,54,0.55)]`}
                       >
-                        <ul className="flex flex-col space-y-3.5">
-                          {link.dropdownItems.map((item) => (
+                        {/* Panel rows */}
+                        <ul className="max-h-[70vh] overflow-y-auto py-1">
+                          {link.dropdownItems.map((item, itemIndex) => (
                             <li key={item.label}>
                               <a
                                 href={item.href}
@@ -279,9 +333,27 @@ export const Navbar = ({ isReady = false }: { isReady?: boolean }) => {
                                   setActiveLink(link.label);
                                   setHoveredLink(null);
                                 }}
-                                className="block text-[15px] font-normal text-[#1e1e1e] hover:text-[#a7773f] hover:underline leading-[1.35] tracking-normal transition-colors duration-150"
+                                className={`group flex items-center justify-between gap-4 px-5 py-3.5 transition-colors duration-200 hover:bg-[#fbf7f1] ${
+                                  itemIndex > 0 ? "border-t border-slate-100" : ""
+                                }`}
                               >
-                                {item.label}
+                                <span className="min-w-0">
+                                  <span className="block font-display text-[15px] font-semibold text-[#142d44] transition-colors duration-200 group-hover:text-[#a7773f]">
+                                    {item.label}
+                                  </span>
+                                  {item.description && (
+                                    <span className="mt-1 block text-[12px] leading-snug text-slate-500">
+                                      {item.description}
+                                    </span>
+                                  )}
+                                </span>
+
+                                <span
+                                  aria-hidden="true"
+                                  className="-translate-x-1 shrink-0 text-sm text-[#b98b52] opacity-0 transition-all duration-200 group-hover:translate-x-0 group-hover:opacity-100"
+                                >
+                                  &rarr;
+                                </span>
                               </a>
                             </li>
                           ))}

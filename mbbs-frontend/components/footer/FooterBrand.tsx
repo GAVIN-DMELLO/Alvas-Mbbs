@@ -1,23 +1,30 @@
 // components/footer/FooterBrand.tsx
+import Image from "next/image";
 
 export const FooterBrand = () => {
   return (
     <div className="flex flex-col space-y-5">
-      <div className="flex items-center gap-3">
-        <div className="grid h-12 w-12 place-items-center rounded-xl border border-white/10 bg-white/5 backdrop-blur">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="#b98b52"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z" />
-            <path d="M12 8v6M9 11h6" />
-          </svg>
+      <div className="flex items-center gap-4">
+        {/* Institution emblem with the same soft glow used in the navbar, so it
+            lifts off the dark footer background */}
+        <div
+          className="relative flex shrink-0 items-center justify-center rounded-full p-1"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(255,255,255,0.28) 0%, rgba(255,255,255,0) 70%)",
+          }}
+        >
+          <Image
+            src="/logo_home.png"
+            alt="Alva's Institute of Medical Sciences and Research Centre emblem"
+            width={420}
+            height={594}
+            className="h-20 w-auto object-contain"
+            style={{
+              filter:
+                "drop-shadow(0 0 1.5px rgba(255,255,255,0.95)) drop-shadow(0 0 8px rgba(255,255,255,0.55))",
+            }}
+          />
         </div>
         <div>
           <h3 className="font-display text-xl font-bold text-white">
