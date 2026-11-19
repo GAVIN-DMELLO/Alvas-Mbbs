@@ -731,7 +731,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
     hod: {
       name: "Dr. Chethana K.",
       designation: "Professor and HOD",
-      image: "Commed_Dr_Chethana_K.JPG",
+      image: "/images/faculties/community-medicine/Commed_Dr_Chethana_K.jpg",
       email: "",
       joiningDate: "15/10/2025",
       qualifications: "MBBS, MD (Community Medicine)",
@@ -752,7 +752,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Mukund Galagali",
         designation: "Professor",
-        image: "Commed_Dr_Mukund_Galagali.jpeg",
+        image: "/images/faculties/community-medicine/Commed_Dr_Mukund_Galagali.jpeg",
         email: "",
         joiningDate: "18/06/2026",
         qualifications: "MBBS, MD (Community Medicine)",
@@ -767,7 +767,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Harshith G. C.",
         designation: "Associate Professor",
-        image: "Commed_Dr_Harshith_G_C.JPG",
+        image: "/images/faculties/community-medicine/Commed_Dr_Harshith_G_C.jpg",
         email: "",
         joiningDate: "27/10/2025",
         qualifications: "MBBS, MD (Community Medicine)",
@@ -782,7 +782,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Harshavardhana V. Naik",
         designation: "Assistant Professor",
-        image: "Dr_Harshavardhana_V_Naik.png",
+        image: "/images/faculties/community-medicine/Dr_Harshavardhana_V_Naik.png",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS, MD (Community Medicine)",
@@ -797,7 +797,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Arya V. R.",
         designation: "Assistant Professor",
-        image: "Commed_Dr_Arya_V_R.JPG",
+        image: "/images/faculties/community-medicine/Commed_Dr_Arya_V_R.jpg",
         email: "",
         joiningDate: "30/03/2026",
         qualifications: "MBBS, MD (Community & Family Medicine)",
@@ -812,7 +812,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Fyroose Eariyaden",
         designation: "Assistant Professor",
-        image: "Commed_Dr_Fyroose_Eariyaden.JPG",
+        image: "/images/faculties/community-medicine/Commed_Dr_Fyroose_Eariyaden.jpg",
         email: "",
         joiningDate: "07/05/2026",
         qualifications: "MBBS, MD (Community Medicine)",
@@ -827,7 +827,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Shweta S.",
         designation: "Assistant Professor cum Statistician",
-        image: "Commed_Dr_Shwetha.jpeg",
+        image: "/images/faculties/community-medicine/Commed_Dr_Shwetha.jpeg",
         email: "",
         joiningDate: "15/04/2026",
         qualifications: "M.Sc, Ph.D.",
@@ -844,7 +844,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Krishna Unni",
         designation: "Senior Resident",
-        image: "Commed_Dr_Krishna_Unni.JPG",
+        image: "/images/faculties/community-medicine/Commed_Dr_Krishna_Unni.jpg",
         email: "",
         joiningDate: "28/01/2026",
         qualifications: "MBBS, MD (Community Medicine)",
@@ -859,22 +859,39 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Meera Sasidharan",
         designation: "Senior Resident",
-        image: "Dr_Meera_Sasidharan.png",
+        image: "/images/faculties/community-medicine/meera_sasidharan_community_medicine.jpg",
         email: "",
-        joiningDate: "02/03/2026",
+        joiningDate: "03/03/2026",
         qualifications: "MBBS, MD (Community Medicine)",
         experience:
-          "Junior resident at KS Hegde Medical Academy (2022-2025), worked as TB Medical officer under NHM for 6 months in 2022.\n\nSenior Resident, Alva's Institute of Medical Sciences and Research Centre (4 Months)\n\nJunior Resident-3, K.S. Hegde Medical Academy (1 Year)\n\nJunior Resident-2, K.S. Hegde Medical Academy (1 Year)\n\nJunior Resident-1, K.S. Hegde Medical Academy (1 Year)",
-        interests: "Occupational health",
+          "Junior resident at KS Hegde Medical Academy (2022-2025), worked as TB Medical officer under NHM for 6 months in 2022.\n\nSenior Resident, Alva's Institute of Medical Sciences and Research Centre (4 Months)\n\nSenior Resident, K.S. Hegde Medical Academy (3 Months)\n\nJunior Resident-3, K.S. Hegde Medical Academy (1 Year)\n\nJunior Resident-2, K.S. Hegde Medical Academy (1 Year)\n\nJunior Resident-1, K.S. Hegde Medical Academy (1 Year)",
+        interests: "Occupational health, Community Pediatrics, Community Obstetrics",
         responsibilities:
           "Training UG students, attending OPD at RHTC and UHTC, conducting camps",
-        achievements: "Published 1 article in journal CEGH (Q2)",
+        achievements:
+          "• Published 1 article in journal CEGH (Q2).\n• Three publications in Q3 journal.",
+        memberships: "None",
+      },
+      {
+        name: "Dr. Ramona Jasmine Robert D souza",
+        designation: "Senior Resident",
+        image:
+          "/images/faculties/community-medicine/ramona_jasmine_community_medicine.jpg",
+        email: "",
+        joiningDate: "11/11/2026",
+        qualifications: "MBBS, MD (Community Medicine)",
+        experience:
+          "Junior Resident, Mysore Medical College and Research Institute, Mysore (3 Years)",
+        interests:
+          "Tuberculosis prevention and control, Public health research, Medical education, implementation, monitoring and evaluation of national health programmes.",
+        responsibilities: "Under Graduate Training and Research",
+        achievements: "None",
         memberships: "None",
       },
       {
         name: "Dr. Bevin Biju Thomas",
         designation: "Tutor",
-        image: "Dr_Bevin_Biju_Thomas.png",
+        image: "/images/faculties/community-medicine/Dr_Bevin_Biju_Thomas.png",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS",
@@ -890,10 +907,10 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Vaishnavi V. Kudva",
         designation: "Tutor",
-        image: "Dr_Vaishnavi_V_Kudva.png",
+        image: "/images/faculties/community-medicine/Dr_Vaishnavi_V_Kudva.png",
         email: "",
         joiningDate: "02/02/2026",
-        qualifications: "MBBS",
+        qualifications: "MBBS- K S Hegde Medical Academy, Mangaluru",
         experience:
           "Tutor, Alva's Institute of Medical Sciences and Research Centre (5 Months)\n\nJunior Resident, Father Muller Medical College (8 Months)",
         interests: "Research",
@@ -905,7 +922,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Mahamed Fazil",
         designation: "Tutor",
-        image: "fazil_community_medicine.jpg",
+        image: "/images/faculties/community-medicine/fazil_community_medicine.jpg",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS",
