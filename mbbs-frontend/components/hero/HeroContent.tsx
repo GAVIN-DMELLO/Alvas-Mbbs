@@ -20,7 +20,7 @@ export const HeroContent = ({ isReady = false }: { isReady?: boolean }) => {
         initial={{ x: rightOffset, opacity: 0 }}
         animate={isReady ? { x: 0, opacity: 1 } : { x: rightOffset, opacity: 0 }}
         transition={{ ...transitionConfig, delay: 0 }}
-        className="font-sans text-5xl lg:text-[64px] font-bold tracking-tight text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)] leading-[1.05]"
+        className="font-display text-5xl lg:text-[64px] font-bold tracking-tight text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)] leading-[1.05]"
       >
         Explore Alva&apos;s<br/>Medical School
       </motion.h1>
@@ -38,7 +38,7 @@ export const HeroContent = ({ isReady = false }: { isReady?: boolean }) => {
         initial={{ x: leftOffset, opacity: 0 }}
         animate={isReady ? { x: 0, opacity: 1 } : { x: leftOffset, opacity: 0 }}
         transition={{ ...transitionConfig, delay: 0.25 }}
-        className="text-white text-lg lg:text-[20px] font-normal max-w-[500px] leading-snug tracking-wide drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]"
+        className="font-sans text-white text-lg lg:text-[20px] font-normal max-w-[500px] leading-snug tracking-wide drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]"
       >
         Meet our community that shares a genuine passion for advancing healthcare and medical research.
       </motion.p>

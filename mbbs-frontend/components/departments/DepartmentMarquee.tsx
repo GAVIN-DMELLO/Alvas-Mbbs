@@ -4,6 +4,7 @@ import { DepartmentCard } from "./DepartmentCard";
 export type MarqueeDepartment = {
   name: string;
   slug: string;
+  image: string;
 };
 
 type DepartmentMarqueeProps = {
@@ -33,6 +34,7 @@ export const DepartmentMarquee = ({
             index={startIndex + (i % departments.length)}
             name={department.name}
             slug={department.slug}
+            image={department.image}
           />
         ))}
       </div>

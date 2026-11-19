@@ -11,6 +11,7 @@ const DISPLAY_NAMES: Record<string, string> = {
 const departments: MarqueeDepartment[] = DEPARTMENTS.map((department) => ({
   slug: department.slug,
   name: DISPLAY_NAMES[department.slug] ?? department.name,
+  image: `/images/departments/${department.slug}.png`,
 }));
 
 const half = Math.ceil(departments.length / 2);

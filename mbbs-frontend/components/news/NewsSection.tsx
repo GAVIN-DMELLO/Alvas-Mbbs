@@ -17,6 +17,7 @@ type MediaItem = {
   description: string;
   imageSrc: string;
   duration: string;
+  videoId: string;
 };
 
 const newsItems: NewsItem[] = [
@@ -50,6 +51,7 @@ const mediaItems: MediaItem[] = [
       "Take a 360° walk through our sprawling campus, state-of-the-art labs, and advanced medical facilities.",
     imageSrc: "/banner-7.jpg",
     duration: "02:45",
+    videoId: "QFlnpbrpriA",
   },
   {
     title: "A Day in the Life of a Med Student",
@@ -57,13 +59,7 @@ const mediaItems: MediaItem[] = [
       "Follow our students through a typical day of lectures, clinical rotations, and campus life.",
     imageSrc: "/banner-4.jpg",
     duration: "04:12",
-  },
-  {
-    title: "Inauguration Ceremony",
-    description:
-      "Highlights from the grand inauguration of the new research wing by dignitaries from the medical fraternity.",
-    imageSrc: "/banner-5.jpg",
-    duration: "06:30",
+    videoId: "4E0mguMcgoI",
   },
 ];
 
@@ -77,18 +73,20 @@ const categoryStyles: Record<string, string> = {
 export const NewsSection = () => {
   const shouldReduceMotion = useReducedMotion();
   const [activeMedia, setActiveMedia] = useState(0);
+  const [playingMedia, setPlayingMedia] = useState<number | null>(null);
 
   // Auto-advance the media carousel
   useEffect(() => {
-    if (shouldReduceMotion) return;
+    if (shouldReduceMotion || playingMedia !== null) return;
     const id = setInterval(() => {
       setActiveMedia((prev) => (prev + 1) % mediaItems.length);
     }, 5000);
     return () => clearInterval(id);
-  }, [shouldReduceMotion]);
+  }, [playingMedia, shouldReduceMotion]);
 
   const goToMedia = (index: number) => {
     setActiveMedia((index + mediaItems.length) % mediaItems.length);
+    setPlayingMedia(null);
   };
 
   return (
@@ -234,43 +232,53 @@ export const NewsSection = () => {
                       transition={{ duration: shouldReduceMotion ? 0 : 0.5, ease: "easeOut" }}
                       className="absolute inset-0"
                     >
-                      <img
-                        src={mediaItems[activeMedia].imageSrc}
-                        alt={mediaItems[activeMedia].title}
-                        className="h-full w-full object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#0b1f33]/80 via-[#0b1f33]/10 to-transparent" />
+                      {playingMedia === activeMedia ? (
+                        <iframe
+                          src={`https://www.youtube.com/embed/${mediaItems[activeMedia].videoId}?autoplay=1&rel=0`}
+                          title={mediaItems[activeMedia].title}
+                          className="h-full w-full"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowFullScreen
+                        />
+                      ) : (
+                        <>
+                          <img
+                            src={mediaItems[activeMedia].imageSrc}
+                            alt={mediaItems[activeMedia].title}
+                            className="h-full w-full object-cover"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-[#0b1f33]/80 via-[#0b1f33]/10 to-transparent" />
 
-                      {/* Play button */}
-                      <button
-                        type="button"
-                        aria-label="Play video"
-                        className="absolute inset-0 m-auto grid h-16 w-16 place-items-center rounded-full bg-white/90 text-[#a7773f] shadow-[0_10px_30px_rgba(0,0,0,0.35)] backdrop-blur transition-transform duration-300 hover:scale-110 sm:h-20 sm:w-20"
-                      >
-                        <svg
-                          width="28"
-                          height="28"
-                          viewBox="0 0 24 24"
-                          fill="currentColor"
-                        >
-                          <path d="M8 5v14l11-7z" />
-                        </svg>
-                      </button>
+                          <button
+                            type="button"
+                            onClick={() => setPlayingMedia(activeMedia)}
+                            aria-label={`Play ${mediaItems[activeMedia].title}`}
+                            className="absolute inset-0 m-auto grid h-16 w-16 place-items-center rounded-full bg-white/90 text-[#a7773f] shadow-[0_10px_30px_rgba(0,0,0,0.35)] backdrop-blur transition-transform duration-300 hover:scale-110 sm:h-20 sm:w-20"
+                          >
+                            <svg
+                              width="28"
+                              height="28"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path d="M8 5v14l11-7z" />
+                            </svg>
+                          </button>
 
-                      {/* Duration badge */}
-                      <span className="absolute right-3 top-3 rounded-md bg-black/60 px-2 py-1 font-mono text-[10px] font-semibold text-white backdrop-blur">
-                        {mediaItems[activeMedia].duration}
-                      </span>
+                          <span className="absolute right-3 top-3 rounded-md bg-black/60 px-2 py-1 font-mono text-[10px] font-semibold text-white backdrop-blur">
+                            {mediaItems[activeMedia].duration}
+                          </span>
 
-                      {/* Caption */}
-                      <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6">
-                        <h4 className="font-display text-lg font-bold text-white sm:text-xl">
-                          {mediaItems[activeMedia].title}
-                        </h4>
-                        <p className="mt-1 line-clamp-2 max-w-md text-sm text-slate-200">
-                          {mediaItems[activeMedia].description}
-                        </p>
-                      </div>
+                          <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6">
+                            <h4 className="font-display text-lg font-bold text-white sm:text-xl">
+                              {mediaItems[activeMedia].title}
+                            </h4>
+                            <p className="mt-1 line-clamp-2 max-w-md text-sm text-slate-200">
+                              {mediaItems[activeMedia].description}
+                            </p>
+                          </div>
+                        </>
+                      )}
                     </motion.div>
                   </AnimatePresence>
 
