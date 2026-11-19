@@ -1117,7 +1117,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
     hod: {
       name: "Dr Roshan R Jalisatgi",
       designation: "Professor & Head of Department",
-      image: "ENT_Dr_Roshan_R_Jalisatgi.JPG",
+      image: "/images/faculties/ent/ENT_Dr_Roshan_R_Jalisatgi.jpg",
       message: "Welcome to the Department of ENT….,",
       email: "",
       joiningDate: "21/03/2026",
@@ -1131,7 +1131,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Mahaveer Jain",
         designation: "Associate Professor",
-        image: "Dr_Mahaveer_Jain.png",
+        image: "/images/faculties/ent/Dr_Mahaveer_Jain.png",
         email: "",
         joiningDate: "02/03/2026",
         qualifications: "MBBS,MS",
@@ -1143,7 +1143,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Rajesh R. Havaldar",
         designation: "Assistant Professor",
-        image: "ENT_Dr_Rajesh_Radhakrishna_Havaladar.JPG",
+        image: "/images/faculties/ent/ENT_Dr_Rajesh_Radhakrishna_Havaladar.jpg",
         email: "",
         joiningDate: "04/02/2026",
         qualifications:
@@ -1162,7 +1162,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Aishwarya Ramakrishnan",
         designation: "Assistant Professor",
-        image: "ENT_Dr_Aishwarya_Ramakrishna.JPG",
+        image: "/images/faculties/ent/ENT_Dr_Aishwarya_Ramakrishna.jpg",
         email: "",
         joiningDate: "17/11/2025",
         qualifications: "MBBS,MS",
@@ -1174,7 +1174,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Shamanth Manohar Shetty",
         designation: "Senior Resident",
-        image: "ENT_Dr_Shamanth_Manohar_Shetty.JPG",
+        image: "/images/faculties/ent/ENT_Dr_Shamanth_Manohar_Shetty.jpg",
         email: "",
         joiningDate: "01/12/2025",
         qualifications: "MBBS,MS",
