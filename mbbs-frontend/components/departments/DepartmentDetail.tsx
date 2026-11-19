@@ -58,12 +58,12 @@ export function DepartmentDetail({ slug }: { slug: string }) {
             className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-5 py-2.5 text-sm font-semibold text-[#142d44] shadow-sm transition-all duration-200 hover:-translate-x-0.5 hover:border-[#b98b52]/50 hover:text-[#a7773f]"
           >
             <span aria-hidden="true">&larr;</span>
-            Back to Departments
+            Back to Departments.
           </Link>
 
           <div className="mt-10 rounded-3xl border border-slate-100 bg-white p-10 text-center shadow-sm">
             <h1 className="font-serif text-3xl text-[#142d44]">
-              Department not found
+              Department not found.
             </h1>
             <p className="mt-3 text-slate-500">
               The department you are looking for does not exist or has moved.
@@ -91,11 +91,11 @@ export function DepartmentDetail({ slug }: { slug: string }) {
   const hodMessageParagraphs =
     messageParagraphs.length > 0
       ? [
-          messageParagraphs[0],
-          ...messageParagraphs
-            .slice(1)
-            .filter((paragraph) => !descriptionParagraphs.has(paragraph)),
-        ]
+        messageParagraphs[0],
+        ...messageParagraphs
+          .slice(1)
+          .filter((paragraph) => !descriptionParagraphs.has(paragraph)),
+      ]
       : [];
 
   const hasProfileDetails = (member: FacultyMember) =>
