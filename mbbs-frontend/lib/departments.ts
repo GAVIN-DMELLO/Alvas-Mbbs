@@ -2199,7 +2199,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
     hod: {
       name: "Dr. C B Ushakiran",
       designation: "Professor & Head of Department",
-      image: "c_b_ushakiran_pediatrics.jpg",
+      image: "/images/faculties/paediatrics/c_b_ushakiran_pediatrics.jpg",
       message: "Welcome to the Department of Paediatrics….,",
       email: "",
       joiningDate: "02/02/2026",
@@ -2214,7 +2214,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Raghavendra M. Doddamani",
         designation: "Professor",
-        image: "Dr_Raghavendra_M_Doddamani.png",
+        image: "/images/faculties/paediatrics/Dr_Raghavendra_M_Doddamani.png",
         email: "",
         joiningDate: "02/02/2026",
         qualifications:
@@ -2241,7 +2241,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Major (Dr.) Abhijith Y. V. (Retd.)",
         designation: "Assistant Professor",
-        image: "Paed_Dr_Abhijith_Y_V.jpg",
+        image: "/images/faculties/paediatrics/Paed_Dr_Abhijith_Y_V.jpg",
         email: "",
         joiningDate: "01/11/2025",
         qualifications: "MBBS, MD (Paediatrics), DPSM, DPAA, PGPN, MBA (HCS)",
@@ -2266,15 +2266,20 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Apoorva R. M.",
         designation: "Assistant Professor",
-        image: "",
+        image: "/images/faculties/paediatrics/apoorva_r_m_paediatrics.jpg",
         email: "",
-        joiningDate: "02/02/2026",
-        qualifications: "MBBS",
+        joiningDate: "01/04/2026",
+        qualifications: "MBBS,MD",
+        experience: "• Senior Resident,SMCRI, Tumakuru (1 Year)",
+        interests: "Paediatric Asthma, Vaccination.",
+        responsibilities: "UG teaching and academic coordination",
+        achievements: "• IAP BLS and ALS trained.\n• Basic and Advanced NRP trained.",
+        memberships: "IAP life membership",
       },
       {
         name: "Dr. Harshitha M. Swamy",
         designation: "Assistant Professor",
-        image: "harshitha_m_swamy_paediatrics.jpg",
+        image: "/images/faculties/paediatrics/harshitha_m_swamy_paediatrics.jpg",
         email: "",
         joiningDate: "01/04/2026",
         qualifications: "MBBS, MD (Pediatrics), Fellowship in Neonatology",
@@ -2306,7 +2311,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Charan Ramakunja",
         designation: "Senior Resident",
-        image: "charan_r_k_pediatrics.jpg",
+        image: "/images/faculties/paediatrics/charan_r_k_pediatrics.jpg",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS, MD (Pediatrics), PGPN",
@@ -2367,7 +2372,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. H. Kumar Naik",
         designation: "Associate Professor",
-        image: "h_kumar_naik_pathology.jpg",
+        image: "/images/faculties/pathology/h_kumar_naik_pathology.jpg",
         email: "",
         joiningDate: "15/06/2026",
         qualifications: "MBBS, MD (Pathology)",
@@ -2381,7 +2386,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Aashish Sharma K.",
         designation: "Assistant Professor",
-        image: "Patho_Dr_Aashish_Sharma_K.JPG",
+        image: "/images/faculties/pathology/Patho_Dr_Aashish_Sharma_K.JPG",
         email: "",
         joiningDate: "18/02/2026",
         qualifications: "MBBS, MD (Pathology), PDCC (Renal Pathology)",
@@ -2398,7 +2403,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Pramitha M",
         designation: "Assistant Professor",
-        image: "pramitha_pathology.jpg",
+        image: "/images/faculties/pathology/pramitha_pathology.jpg",
         email: "",
         joiningDate: "31/10/2025",
         qualifications: "MBBS,MD",
@@ -2413,7 +2418,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Sai K",
         designation: "Assistant Professor",
-        image: "Patho_Dr_Sai_K.JPG",
+        image: "/images/faculties/pathology/Dr_Sai_K.png",
         email: "",
         joiningDate: "03/07/2025",
         qualifications: "MBBS,MD",
@@ -2421,7 +2426,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Ashok Marathe",
         designation: "Assistant Professor",
-        image: "ashok_marathe_pathology.jpg",
+        image: "/images/faculties/pathology/ashok_marathe_pathology.jpg",
         email: "",
         joiningDate: "03/10/2025",
         qualifications: "MBBS, MD, DCP, DNB (Pathology)",
@@ -2439,23 +2444,25 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Vinutha B",
         designation: "Assistant Professor",
-        image: "",
+        image: "/images/faculties/pathology/Dr_Vinutha_B_Pathology.jpg",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS, MD",
         experience:
-          "• Assistant Professor, GRMCH, Mangalore (3 Years)\n• Senior Resident, KOIMS, Madikeri (1 Year)",
-        interests: "Hematology, Cytology, Histopathology",
+          "• Assistant Professor, Alvas Institute of Medical Sciences (9 Months)\n• Assistant Professor, GR Medical College and Hospital (3 Years)\n• Senior Resident, Kodagu Institute of Medical Sciences (1 Year)",
+        interests:
+          "Cytopathology, Hematology, Clinical pathology and Histopathology",
         responsibilities:
-          "• Diagnostic reporting of routine hematology, cytology, clinical pathology, and histopathology cases\n• Teaching and training undergraduate and paramedical students\n• Quality assurance of the laboratory and improvement initiatives of the department",
-        achievements: "NA",
+          "• Undergraduate teaching - theory and practical sessions\n• Diagnostic reporting of routine hematology, cytology, clinical pathology, and histopathology cases\n• Routine reporting of hematology, cytology, clinical pathology and histopathology cases\n• Oversee lab quality systems and maintain compliance with the accreditation standards\n• Teaching and training undergraduate and paramedical students\n• Quality assurance of the laboratory and improvement initiatives of the department",
+        achievements:
+          "• Published a chapter in the book: Systems biology approaches: Prevention, diagnosis and understanding mechanisms of complex diseases - Springer publications.\n• Thesis on Sputum cytology in pulmonary diseases",
         memberships:
-          "Professional Memberships:\n• Lifetime Member, Karnataka Chapter of Indian Association of Pathologists and Microbiologists (KCIAPM)",
+          "Professional Memberships:\n• Life member of Karnataka chapter of Indian Association of Pathologists and Microbiologists",
       },
       {
         name: "Dr. Arun J. R.",
         designation: "Senior Resident",
-        image: "Patho_Dr_Arun_J_R.JPG",
+        image: "/images/faculties/pathology/Patho_Dr_Arun_J_R.JPG",
         email: "",
         joiningDate: "01/12/2025",
         qualifications: "MBBS, MD (Pathology)",
@@ -2481,7 +2488,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Balaji D R",
         designation: "Tutor",
-        image: "Pathology_Dr_Balaji_D_R.png",
+        image: "/images/faculties/pathology/Pathology_Dr_Balaji_D_R.png",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS",
@@ -2489,7 +2496,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. K Anirudh Bhat",
         designation: "Tutor",
-        image: "anirudh_bhat_physiology.jpg",
+        image: "/images/faculties/pathology/anirudh_bhat_physiology.jpg",
         email: "",
         joiningDate: "28/01/2026",
         qualifications: "MBBS",
@@ -2517,7 +2524,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Sonia George",
         designation: "Tutor",
-        image: "Pathology_Dr_Sonia_George.jpg",
+        image: "/images/faculties/pathology/Pathology_Dr_Sonia_George.jpg",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS",
@@ -2532,7 +2539,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Yashwanth D J",
         designation: "Tutor",
-        image: "yashwanth_d_j_pathology.jpg",
+        image: "/images/faculties/pathology/yashwanth_d_j_pathology.jpg",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS",
@@ -2576,7 +2583,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
     hod: {
       name: "Dr. Ravindra S. Beedimani",
       designation: "Professor and Head",
-      image: "Pharmaco_Dr_Ravindra_S_Beedimani.JPG",
+      image: "/images/faculties/pharmacology/Pharmaco_Dr_Ravindra_S_Beedimani.JPG",
       email: "pharmacology@aimsarc.org",
       message: "Welcome to the department of Pharmacology",
       joiningDate: "02/11/2025",
@@ -2596,7 +2603,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Laxminarayna Bairy K.",
         designation: "Professor",
-        image: "Pharmoco_Dr_Laxminarayana_Bairy.JPG",
+        image: "/images/faculties/pharmacology/Pharmoco_Dr_Laxminarayana_Bairy.JPG",
         email: "",
         joiningDate: "01/11/2025",
         qualifications: "MBBS (1980), MD (1985), Ph.D. (1991)",
@@ -2613,7 +2620,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Rekha Nayaka M. R.",
         designation: "Professor",
-        image: "Pharmaco_Dr_Rekha_Nayaka_M_R.jpeg",
+        image: "/images/faculties/pharmacology/Pharmaco_Dr_Rekha_Nayaka_M_R.jpeg",
         email: "",
         joiningDate: "06/03/2026",
         qualifications: "MBBS, MD (Pharmacology)",
@@ -2637,7 +2644,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Sangeethanath Sharma",
         designation: "Assistant Professor",
-        image: "Pharmaco_Dr_Sangeethanath_Sharma.jpeg",
+        image: "/images/faculties/pharmacology/Pharmaco_Dr_Sangeethanath_Sharma.jpeg",
         email: "",
         joiningDate: "02/03/2026",
         qualifications: "MBBS, MD",
@@ -2653,7 +2660,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Abhijna Ballal R.",
         designation: "Senior Resident",
-        image: "Pharmaco_Dr_Abhijna_Ballal_R.JPG",
+        image: "/images/faculties/pharmacology/Pharmaco_Dr_Abhijna_Ballal_R.JPG",
         email: "",
         joiningDate: "15/04/2026",
         qualifications: "M.Sc., Ph.D.",
@@ -2670,7 +2677,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Krishnamurthy Kadamalakatte Hanumantha Shetty",
         designation: "Senior Resident",
-        image: "Pharmaco_Dr_Krishnamurthy_K_H_S.jpeg",
+        image: "/images/faculties/pharmacology/Pharmaco_Dr_Krishnamurthy_K_H_S.jpeg",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS, MD",
@@ -2678,7 +2685,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Vasu Praveen Chander Kanuru",
         designation: "Senior Resident",
-        image: "Pharmaco_Dr_Vasu_Praveen_Chander.jpeg",
+        image: "/images/faculties/pharmacology/Pharmaco_Dr_Vasu_Praveen_Chander.jpeg",
         email: "",
         joiningDate: "02/03/2026",
         qualifications: "MBBS, MD",
@@ -2730,7 +2737,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
     hod: {
       name: "Dr. Jnaneshwara P. Shenoy",
       designation: "Professor & Head",
-      image: "Physiology_Dr_Jnaneshwara_P_Shenoy.JPG",
+      image: "/images/faculties/physiology/Physiology_Dr_Jnaneshwara_P_Shenoy.JPG",
       email: "",
       joiningDate: "30/10/2025",
       qualifications: "MBBS, MD",
@@ -2748,7 +2755,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Swati Nitin Tikare",
         designation: "Professor",
-        image: "Physio_Dr_Swati_Nitin_Tikare.jpeg",
+        image: "/images/faculties/physiology/Physio_Dr_Swati_Nitin_Tikare.jpeg",
         email: "",
         joiningDate: "02/02/2026",
         qualifications:
@@ -2767,7 +2774,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Ganaraja Bolumbu",
         designation: "Professor",
-        image: "Physio_Dr_Ganaraj_Bolumbu.JPG",
+        image: "/images/faculties/physiology/Physio_Dr_Ganaraj_Bolumbu.JPG",
         email: "",
         joiningDate: "13/04/2026",
         qualifications: "• MSc. Medical Physiology\n• PhD.",
@@ -2790,7 +2797,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Deepak Martin Tomy",
         designation: "Tutor",
-        image: "Physio_Dr_Deepak_Martin_Tomy.jpeg",
+        image: "/images/faculties/physiology/Physio_Dr_Deepak_Martin_Tomy.jpeg",
         email: "",
         joiningDate: "01/11/2025",
         qualifications: "MBBS",
@@ -2798,7 +2805,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Anil Reddy D N",
         designation: "Tutor",
-        image: "anil_reddy_physiology.jpg",
+        image: "/images/faculties/physiology/anil_reddy_physiology.jpg",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS",
@@ -2807,7 +2814,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Nigel Preston Quadros",
         designation: "Tutor",
-        image: "Physio_Dr_Nigel_Preston_Quadros.jpeg",
+        image: "/images/faculties/physiology/Dr_Nigel_Preston_Quadros.png",
         email: "",
         joiningDate: "01/11/2025",
         qualifications: "MBBS",
@@ -2834,7 +2841,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Ranjitha H G",
         designation: "Tutor",
-        image: "Physio_Dr_Ranjitha_H_G.jpeg",
+        image: "/images/faculties/physiology/Physio_Dr_Ranjitha_H_G.jpeg",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS",
@@ -2842,7 +2849,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. K Anirudh Bhat",
         designation: "Tutor",
-        image: "anirudh_bhat_physiology.jpg",
+        image: "/images/faculties/physiology/anirudh_bhat_physiology.jpg",
         email: "",
         joiningDate: "28/01/2026",
         qualifications: "MBBS",
@@ -2878,7 +2885,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Kartik Kashyap",
         designation: "Associate Professor",
-        image: "Dr_Kartik_Kashyap.png",
+        image: "/images/faculties/psychiatry/Dr_Kartik_Kashyap.png",
         email: "",
         joiningDate: "01/04/2026",
         qualifications: "MBBS,DPM,DNB",
@@ -2886,7 +2893,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Aniruddha Shetty",
         designation: "Assistant Professor",
-        image: "Dr_Aniruddha_Shetty.png",
+        image: "/images/faculties/psychiatry/Dr_Aniruddha_Shetty.png",
         email: "",
         joiningDate: "01/09/2025",
         qualifications: "MBBS,MD",
@@ -2894,7 +2901,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Prajakta V Rao",
         designation: "Senior Resident",
-        image: "Psychia_Dr_Prajaktha.JPG",
+        image: "/images/faculties/psychiatry/Psychia_Dr_Prajaktha.JPG",
         email: "",
         joiningDate: "29/10/2025",
         qualifications: "MBBS,DPM,DNB",
@@ -2902,7 +2909,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Sindhu K S",
         designation: "Clinical Psychologist",
-        image: "Dr_Sindhu_K_S.png",
+        image: "/images/faculties/psychiatry/Dr_Sindhu_K_S.png",
         email: "",
         joiningDate: "04/05/2026",
         qualifications: "MSc,MPhil",
@@ -2921,7 +2928,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
     hod: {
       name: "Dr. Ramprakash G",
       designation: "Professor & Head of Department",
-      image: "Dr_Ram_Prakash_G.png",
+      image: "/images/faculties/radiology/Dr_Ram_Prakash_G.png",
       message: "Welcome to the Department of Radiology….,",
       email: "",
       joiningDate: "02/03/2026",
@@ -2935,7 +2942,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Kedarnath Dixit",
         designation: "Associate Professor",
-        image: "Dr_Kedarnath_Dixit.png",
+        image: "/images/faculties/radiology/Dr_Kedarnath_Dixit.png",
         email: "",
         joiningDate: "02/03/2026",
         qualifications: "MBBS,MD",
@@ -2943,7 +2950,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Gouri B Kaverappa",
         designation: "Associate Professor",
-        image: "Dr_Gouri_B_Kaveriappa_Dr_Gouri_B_Kaveriappa_117.png",
+        image: "/images/faculties/radiology/Dr_Gouri_B_Kaveriappa_Dr_Gouri_B_Kaveriappa_117.png",
         email: "",
         joiningDate: "28/04/2026",
         qualifications: "MBBS,MD",
@@ -2951,7 +2958,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Thilak Shetty",
         designation: "Assistant Professor",
-        image: "Dr_Thilak_Shetty.png",
+        image: "/images/faculties/radiology/Dr_Thilak_Shetty.png",
         email: "",
         joiningDate: "02/12/2025",
         qualifications: "MBBS,DMRD",
@@ -2959,7 +2966,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Dakshayini H S",
         designation: "Assistant Professor",
-        image: "Dr_Dakshayini_H_S.png",
+        image: "/images/faculties/radiology/Dr_Dakshayini_H_S.png",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS,MD",
@@ -2967,7 +2974,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Nagaraj P",
         designation: "Assistant Professor",
-        image: "Dr_Nagaraj_P.png",
+        image: "/images/faculties/radiology/Dr_Nagaraj_P.png",
         email: "",
         joiningDate: "02/03/2026",
         qualifications: "MBBS,DMRD",
@@ -2975,15 +2982,23 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Siddaling Basavraj Mindolli",
         designation: "Assistant Professor",
-        image: "",
+        image: "/images/faculties/radiology/Dr._SIDDALINGA_RADILOGY.jpg",
         email: "",
         joiningDate: "18/02/2026",
-        qualifications: "MBBS,MD",
+        qualifications: "MBBS,MD(Radiodiagnosis)",
+        experience:
+          "•Assistant Professor,Alva's Institute of Medical Science and Research Centre(18/02/2026 - Present)\n• Senior Resident,Indira Medical College (3 Years)",
+        interests:
+          "Fetal Medicine,Obstetric Ultrasound,Fetal Echocardiography,Doppler Studies,Cross-sectional Imaging (CT and MRI),Women's Imaging,Abdominal Imaging,Emergency Radiology,Medical Education and Research",
+        responsibilities:
+          "• Reporting of X-ray, ultrasound and cross-sectional imaging studies.\n• Performing obstetric and fetal ultrasound examinations.\n• Contributing to departmental academic, teaching and clinical activities.",
+        achievements:
+          "• Awarded the Departmental Gold Medal during postgraduate training in Radiodiagnosis.\n• Published research article titled \"Evaluation of Focal Liver Lesions Using Triphasic Multidetector Computed Tomography: A Prospective Study.\"\n• Published research article titled \"Comparative Ultrasound Evaluation of Intima-Media Thickness of Common Carotid Arteries and Abdominal Aorta in Normal Term Newborns and Small for Gestational Age Term Newborns.\"\n• Completed advanced training in Fetal Medicine, with a special interest in fetal ultrasound and fetal echocardiography.",
       },
       {
         name: "Sharath Kumar Srinivas Prabhu",
         designation: "Assistant Professor",
-        image: "",
+        image: "/images/faculties/radiology/vaibhav_radiology.jpg",
         email: "",
         joiningDate: "",
         qualifications: "",
@@ -2994,12 +3009,17 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
         image: "",
         email: "",
         joiningDate: "02/03/2026",
-        qualifications: "MBBS,MD",
+        qualifications: "MBBS,MD(Radiology)",
+        experience:
+          "• Junior Resident,KSHEMA (3 Years)\n\n• Fetal Medicine Fellow,ANSH FETAL CARE CENTRE AHMEDABAD (6 Months)",
+        interests: "Fetal Medicine, MSK Radiology",
+        responsibilities: "Junior Resident",
+        memberships: "IRIA",
       },
       {
         name: "Dr. Jeevan J",
         designation: "Senior Resident",
-        image: "Dr_Jeevan_J.png",
+        image: "/images/faculties/radiology/Dr_Jeevan_J.png",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS,MD",
@@ -3011,6 +3031,21 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
         email: "",
         joiningDate: "",
         qualifications: "",
+      },
+      {
+        name: "Dr. Prajwal M P",
+        designation: "Senior Resident",
+        image: "/images/faculties/radiology/PRAJWAL_M_P_RADIOLOGY.jpg",
+        email: "",
+        joiningDate: "03/11/2026",
+        qualifications: "MBBS,MD(Radio-Diagnosis)",
+        experience:
+          "• Junior Resident,Sri Siddhartha Medical college (3 Years)\n\n• Junior Resident,Adichunchanagiri institute of medical science (6 Months)",
+        interests: "X-Ray, Ultrasonography, Computed Tomography, MRI",
+        responsibilities: "UG teaching, Reporting daily cases.",
+        achievements:
+          "• Completed MD Radio-Diagnosis from Sri Siddhartha Medical College, Tumkur.\n• Developed independent multimodality reporting skills across X-ray, USG, CT and MRI.\n• Hands-on experience in USG-guided FNAC, core biopsies, aspirations and drainage procedures.\n• Published research in Scopus- and PubMed-indexed journals, including original research and case reports.\n• Co-authored four research papers and two case reports.\n• Presented research papers and posters at IRIA National and Karnataka State Conferences 2026.\n• Pursued advanced fellowship training in fetal and obstetric ultrasonography.\n• Previous teaching experience as a Tutor in the Department of Microbiology.",
+        memberships: "IRIA membership (Karnataka chapter)",
       },
     ],
   },
