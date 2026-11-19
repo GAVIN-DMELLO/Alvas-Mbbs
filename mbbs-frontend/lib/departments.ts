@@ -949,7 +949,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
     hod: {
       name: "Dr. Bhuvaneshwari Kalmath Beedimani",
       designation: "Professor & Head, Dental Unit",
-      image: "bhuwaneshwari_beedimani_dentistry.jpg",
+      image: "/images/faculties/dentistry/bhuwaneshwari_beedimani_dentistry.jpg",
       message: "Welcome to Department of Dentistry",
       email: "",
       joiningDate: "20/07/2026",
@@ -969,7 +969,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr.Nagarathna D V",
         designation: "Professor",
-        image: "Dr_Nagarathna_D_V.png",
+        image: "/images/faculties/dentistry/Dr_Nagarathna_D_V.png",
         email: "",
         joiningDate: "02/03/2026",
         qualifications: "BDS,MDS",
@@ -981,7 +981,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr Ashish J Rai",
         designation: "Associate Professor",
-        image: "Dr_Ashish_J_Rai.png",
+        image: "/images/faculties/dentistry/Dr_Ashish_J_Rai.png",
         email: "",
         joiningDate: "02/03/2026",
         qualifications: "BDS,MDS",
@@ -1005,7 +1005,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr Nidhi Shetty",
         designation: "Senior Resident",
-        image: "Dr_Nidhi_Shetty.png",
+        image: "/images/faculties/dentistry/Dr_Nidhi_Shetty.png",
         email: "",
         joiningDate: "02/03/2026",
         qualifications: "BDS,MDS",
