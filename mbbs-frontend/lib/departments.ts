@@ -316,7 +316,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
     hod: {
       name: "Dr. Jayaprakash B. R",
       designation: "Professor & Head of Department",
-      image: "Anatom_Dr_Jayaprakash_BR.JPG",
+      image: "/images/faculties/anatomy/Anatom_Dr_Jayaprakash_BR.JPG",
       message: "Welcome to the Department of Anatomy…",
       email: "",
       joiningDate: "31/10/2025",
@@ -332,7 +332,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Praveen M. Shenoy",
         designation: "Professor",
-        image: "Anatomy_Dr_Praveen_Shenoy.jpeg",
+        image: "/images/faculties/anatomy/Anatomy_Dr_Praveen_Shenoy.jpeg",
         email: "",
         joiningDate: "01/07/2026",
         qualifications: "MBBS, MD",
@@ -347,7 +347,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Rajalakshmi Rai",
         designation: "Associate Prof.",
-        image: "Anatomy_Dr_Rajalaxmi_Rai.jpeg",
+        image: "/images/faculties/anatomy/Anatomy_Dr_Rajalaxmi_Rai.jpeg",
         email: "",
         joiningDate: "01/01/2026",
         qualifications: "MSC, Phd",
@@ -360,7 +360,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Rahul",
         designation: "Tutor",
-        image: "Anatomy_Dr_Rahul.jpeg",
+        image: "/images/faculties/anatomy/Anatomy_Dr_Rahul.jpeg",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS",
@@ -372,7 +372,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Ranganath Gurunath Talawar",
         designation: "Tutor",
-        image: "Anatomy_Dr_Ranganath_G_T.jpeg",
+        image: "/images/faculties/anatomy/Anatomy_Dr_Ranganath_G_T.jpeg",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS",
@@ -384,7 +384,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Sharath H",
         designation: "Tutor",
-        image: "Anatomy_Dr_Sharath_H.jpeg",
+        image: "/images/faculties/anatomy/Anatomy_Dr_Sharath_H.jpeg",
         email: "",
         joiningDate: "01/11/2025",
         qualifications: "MBBS",
@@ -396,7 +396,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Sharanabasappa Kolli",
         designation: "Tutor",
-        image: "Anatomy_Dr_Sharana_B_K.jpeg",
+        image: "/images/faculties/anatomy/Anatomy_Dr_Sharana_B_K.jpeg",
         email: "",
         joiningDate: "02/03/2026",
         qualifications: "MBBS",
@@ -408,7 +408,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Balakrishna Y C",
         designation: "Tutor",
-        image: "Anatomy_Dr_Balakrishna_Y_C.jpeg",
+        image: "/images/faculties/anatomy/Anatomy_Dr_Balakrishna_Y_C.jpeg",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS",
@@ -420,7 +420,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Prajwal Kumar",
         designation: "Tutor",
-        image: "Anatomy_Dr_Prajwal_Kumar.jpeg",
+        image: "/images/faculties/anatomy/Anatomy_Dr_Prajwal_Kumar.jpeg",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS",
@@ -433,7 +433,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Shreya G",
         designation: "Tutor",
-        image: "Anatomy_Dr_Shreya_G.jpeg",
+        image: "/images/faculties/anatomy/Anatomy_Dr_Shreya_G.jpeg",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS",
@@ -445,7 +445,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Satyam Jyoti",
         designation: "Tutor",
-        image: "Anatomy_Dr_Satyam_Jyothi.jpeg",
+        image: "/images/faculties/anatomy/Anatomy_Dr_Satyam_Jyothi.jpeg",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS",
