@@ -1,6 +1,7 @@
 // app/departments/page.tsx
 
 import Link from "next/link";
+import Image from "next/image";
 import {
   DEPARTMENTS,
   type DepartmentCategory,
@@ -60,35 +61,45 @@ export default function DepartmentsPage() {
               <Link
                 key={department.slug}
                 href={`/departments/${department.slug}`}
-                className="group relative flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#b98b52]/30 hover:shadow-[0_22px_50px_-30px_rgba(15,41,66,0.35)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#b98b52]/40 focus-visible:ring-offset-2"
+                className="group relative flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#b98b52]/30 hover:shadow-[0_22px_50px_-30px_rgba(15,41,66,0.35)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#b98b52]/40 focus-visible:ring-offset-2"
               >
-                <div className="flex items-start justify-between">
-                  <span
-                    className={`block h-1.5 w-9 rounded-full ${styles.accent}`}
+                <div className="relative h-32 overflow-hidden">
+                  <Image
+                    src={`/images/departments/${department.slug}.png`}
+                    alt={`${department.name} department`}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 25vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <span className="text-[11px] font-semibold tabular-nums tracking-[0.12em] text-slate-300">
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0b1f33]/75 via-[#0b1f33]/10 to-transparent" />
+                  <span className="absolute right-6 top-5 text-[11px] font-semibold tabular-nums tracking-[0.12em] text-white/75">
                     {String(index + 1).padStart(2, "0")}
                   </span>
                 </div>
 
-                <h2 className="mt-5 font-serif text-lg leading-snug text-[#142d44] xl:text-xl">
-                  {department.name}
-                </h2>
-
-                <p className="mt-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-400">
-                  {department.category}
-                </p>
-
-                <div className="mt-5 flex items-center justify-between border-t border-slate-100 pt-3 transition-colors duration-300 group-hover:border-[#b98b52]/40">
-                  <span className="text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-400 transition-colors duration-300 group-hover:text-[#a7773f]">
-                    View Department
-                  </span>
+                <div className="p-6">
                   <span
-                    aria-hidden="true"
-                    className="text-sm text-[#b98b52] transition-transform duration-300 group-hover:translate-x-1"
-                  >
-                    &rarr;
-                  </span>
+                    className={`mb-4 block h-1.5 w-9 rounded-full ${styles.accent}`}
+                  />
+                  <h2 className="font-serif text-lg leading-snug text-[#142d44] xl:text-xl">
+                    {department.name}
+                  </h2>
+
+                  <p className="mt-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-400">
+                    {department.category}
+                  </p>
+
+                  <div className="mt-5 flex items-center justify-between border-t border-slate-100 pt-3 transition-colors duration-300 group-hover:border-[#b98b52]/40">
+                    <span className="text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-400 transition-colors duration-300 group-hover:text-[#a7773f]">
+                      View Department
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      className="text-sm text-[#b98b52] transition-transform duration-300 group-hover:translate-x-1"
+                    >
+                      &rarr;
+                    </span>
+                  </div>
                 </div>
               </Link>
             );

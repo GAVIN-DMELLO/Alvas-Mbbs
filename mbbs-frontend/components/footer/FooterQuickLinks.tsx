@@ -1,15 +1,9 @@
 // components/footer/FooterQuickLinks.tsx
 
 const links = [
-  { name: "Home", href: "/" },
-  { name: "About Us", href: "/about" },
-  { name: "Admissions", href: "/admissions" },
-  { name: "Student Resources", href: "/programs?tab=academic" },
-  { name: "Rules & Regulations", href: "/programs?tab=rules-and-regulations" },
   { name: "Departments", href: "/departments" },
-  { name: "Hospital Services", href: "/hospital" },
-  { name: "Campus Life", href: "/campus-life" },
-  { name: "Contact Us", href: "/contact" },
+  { name: "College", href: "/about/about-alvas" },
+  { name: "Objectives", href: "/about/objectives" },
 ];
 
 export const FooterQuickLinks = () => {
