@@ -1213,7 +1213,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       designation: "Professor and Head of the Department",
       email: "",
       joiningDate: "25/02/2026",
-      image: "Forensic_Dr_Meena_Kiran.jpeg",
+      image: "/images/faculties/forensic-medicine/Forensic_Dr_Meena_Kiran.jpeg",
       qualifications: "MBBS, MD Forensic Medicine and Toxicology",
       experience:
         "1. In-Charge HOD & Associate Professor - AIMSARC, Mijar (4 Months)\n2. Associate Professor - SIMS & RC, Mukka (2 Years, 8 Months, 8 Days)\n3. Assistant Professor - BGS-GIMS, Bengaluru (4 Years, 4 Days)\n4. Assistant Professor - RRMCH, Bengaluru (1 Year, 3 Days)",
@@ -1232,7 +1232,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
         designation: "Dean / Principal",
         email: "dean@aimsarc.org",
         joiningDate: "15-06-2005",
-        image: "/images/Dean.jpg",
+        image: "/images/faculties/forensic-medicine/Dean.jpg",
         qualifications:
           "MD (Forensic Medicine) – Kasturba Medical College (KMC), Manipal, Karnataka\nMBBS – J.N. Medical College (JNMC), Belagavi, Karnataka",
         experience:
@@ -1247,7 +1247,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Mohammad Asif H",
         designation: "Tutor",
-        image: "Forensic_Dr_Mohammad_Asif_H.jpeg",
+        image: "/images/faculties/forensic-medicine/Forensic_Dr_Mohammad_Asif_H.jpeg",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS",
@@ -1259,7 +1259,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Pandu Naik",
         designation: "Tutor",
-        image: "Forensic_Dr_Pandu_Naik.jpeg",
+        image: "/images/faculties/forensic-medicine/Forensic_Dr_Pandu_Naik.jpeg",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS",
@@ -1271,7 +1271,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Veeresh Patel S",
         designation: "Tutor",
-        image: "Forensic_Dr_Veeresh_Patel_S.jpeg",
+        image: "/images/faculties/forensic-medicine/Forensic_Dr_Veeresh_Patel_S.jpeg",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS",
@@ -1283,7 +1283,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Sagar G",
         designation: "Tutor",
-        image: "Forensic_Dr_Sagar_G.jpeg",
+        image: "/images/faculties/forensic-medicine/Forensic_Dr_Sagar_G.jpeg",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS",
@@ -1295,7 +1295,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Shreyas G K",
         designation: "Tutor",
-        image: "Forensic_Dr_Shreyas_K.jpeg",
+        image: "/images/faculties/forensic-medicine/Forensic_Dr_Shreyas_K.jpeg",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS",
@@ -1307,7 +1307,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Raza Rehman Ibrahim",
         designation: "Tutor",
-        image: "Forensic_Dr_Raza_Rehman.jpeg",
+        image: "/images/faculties/forensic-medicine/Forensic_Dr_Raza_Rehman.jpeg",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS",
@@ -1319,7 +1319,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Yathish Kumar C",
         designation: "Tutor",
-        image: "Forensic_Dr_Yathish_Kumar_C.jpeg",
+        image: "/images/faculties/forensic-medicine/Forensic_Dr_Yathish_Kumar_C.jpeg",
         email: "",
         joiningDate: "19/06/2026",
         qualifications: "MBBS",
@@ -1357,7 +1357,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Bolar Sadananda Naik",
         designation: "Associate Professor",
-        image: "Gen_Med_Dr_Bolar_Sadananda_Naik.JPG",
+        image: "/images/faculties/general-medicine/Gen_Med_Dr_Bolar_Sadananda_Naik.jpg",
         email: "",
         joiningDate: "01/12/2025",
         qualifications: "MBBS,MD",
@@ -1365,7 +1365,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. PVR Leela Mohan",
         designation: "Associate Professor",
-        image: "Dr_PVR_Leela_Mohan.png",
+        image: "/images/faculties/general-medicine/Dr_PVR_Leela_Mohan.png",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS,MD",
@@ -1373,7 +1373,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Pranamya Jain",
         designation: "Associate Professor",
-        image: "Dr_Pranamya_Dr_Pranamya_88.png",
+        image: "/images/faculties/general-medicine/Dr_Pranamya_Dr_Pranamya_88.png",
         email: "",
         joiningDate: "16/04/2026",
         qualifications: "MBBS,MD",
@@ -1381,7 +1381,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Mithun S",
         designation: "Associate Professor",
-        image: "Dr_Mithun_S.png",
+        image: "/images/faculties/general-medicine/Dr_Mithun_S.png",
         email: "",
         joiningDate: "01/04/2026",
         qualifications: "MBBS,MD",
@@ -1389,7 +1389,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Dhanya Alva K",
         designation: "Assistant Professor",
-        image: "Dr_Dhanya_Alva_K.png",
+        image: "/images/faculties/general-medicine/Dr_Dhanya_Alva_K.png",
         email: "",
         joiningDate: "07/11/2025",
         qualifications: "MBBS,MD",
@@ -1397,7 +1397,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Dithesh M",
         designation: "Assistant Professor",
-        image: "Gen_Med_Dr_Dithesh_M.JPG",
+        image: "/images/faculties/general-medicine/Gen_Med_Dr_Dithesh_M.jpg",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS,MD",
@@ -1405,7 +1405,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Vipindas P S",
         designation: "Assistant Professor",
-        image: "Dr_Vipindas_P_S.png",
+        image: "/images/faculties/general-medicine/Dr_Vipindas_P_S.png",
         email: "",
         joiningDate: "01/10/2025",
         qualifications: "MBBS,MD",
@@ -1413,7 +1413,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Abhijnya K R",
         designation: "Assistant Professor",
-        image: "Dr_Abhijnya_K_R.png",
+        image: "/images/faculties/general-medicine/Dr_Abhijnya_K_R.png",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS,MD",
@@ -1421,7 +1421,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Apoorva M Kottary",
         designation: "Assistant Professor",
-        image: "Dr_Apoorva_M_Kottary.png",
+        image: "/images/faculties/general-medicine/Dr_Apoorva_M_Kottary.png",
         email: "",
         joiningDate: "01/04/2026",
         qualifications: "MBBS,MD",
@@ -1429,7 +1429,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Abhilash N",
         designation: "Senior Resident",
-        image: "Dr_Abhilash_N.png",
+        image: "/images/faculties/general-medicine/Dr_Abhilash_N.png",
         email: "",
         joiningDate: "02/03/2026",
         qualifications: "MBBS,MD",
@@ -1437,7 +1437,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Anup Raikar",
         designation: "Senior Resident",
-        image: "Dr_Anup_Raikar.png",
+        image: "/images/faculties/general-medicine/Dr_Anup_Raikar.png",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS,MD",
@@ -1445,7 +1445,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Harshavardhan R",
         designation: "Senior Resident",
-        image: "Dr_Harshavardhan_R.png",
+        image: "/images/faculties/general-medicine/Dr_Harshavardhan_R.png",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS,MD",
@@ -1461,7 +1461,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Rajashekhar Mulimani",
         designation: "Senior Resident",
-        image: "Dr_Rajashekhar_Mulimani.png",
+        image: "/images/faculties/general-medicine/Dr_Rajashekhar_Mulimani.png",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS,MD",
@@ -1494,7 +1494,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Pangal Harish Nayak",
         designation: "Medical Superintendent",
-        image: "Dr_Pangal_Harish_Nayak.png",
+        image: "/images/faculties/general-surgery/Dr_Pangal_Harish_Nayak.png",
         email: "",
         joiningDate: "09/12/2025",
         qualifications: "MBBS,MS",
@@ -1502,7 +1502,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Gaurav Prasad",
         designation: "Professor",
-        image: "Dr_Gaurav_Prasad.png",
+        image: "/images/faculties/general-surgery/Dr_Gaurav_Prasad.png",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS,MS",
@@ -1510,7 +1510,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Praveen G P",
         designation: "Associate Professor",
-        image: "Dr_Praveen_G_P.png",
+        image: "/images/faculties/general-surgery/Dr_Praveen_G_P.png",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS,MS",
@@ -1534,7 +1534,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Vinay Alva",
         designation: "Assistant Professor",
-        image: "Gen_Sur_Dr_Vinay_Alva.JPG",
+        image: "/images/faculties/general-surgery/Gen_Sur_Dr_Vinay_Alva.jpg",
         email: "",
         joiningDate: "",
         qualifications: "MBBS,MS",
@@ -1542,7 +1542,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Sattar Khan",
         designation: "Assistant Professor",
-        image: "Dr_Sattar_Khan.png",
+        image: "/images/faculties/general-surgery/Dr_Sattar_Khan.png",
         email: "",
         joiningDate: "01/01/2026",
         qualifications: "MBBS,MS,MCH",
@@ -1550,7 +1550,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Rakesh Shivram Shetty",
         designation: "Assistant Professor",
-        image: "Dr_Rakesh_Shivram_Shetty.png",
+        image: "/images/faculties/general-surgery/Dr_Rakesh_Shivram_Shetty.png",
         email: "",
         joiningDate: "01/12/2025",
         qualifications: "MBBS,MS",
@@ -1558,7 +1558,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Hyadalu Ramu Abhirup",
         designation: "Assistant Professor",
-        image: "Dr_Hyadalu_Ramu_Abhirup.png",
+        image: "/images/faculties/general-surgery/Dr_Hyadalu_Ramu_Abhirup.png",
         email: "",
         joiningDate: "01/12/2025",
         qualifications: "MBBS,MS",
@@ -1574,7 +1574,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Prajwal K Rao",
         designation: "Assistant Professor",
-        image: "Dr_Prajwal_K_Rao.png",
+        image: "/images/faculties/general-surgery/Dr_Prajwal_K_Rao.png",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS,MS",
@@ -1582,7 +1582,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Bhavya K P",
         designation: "Assistant Professor",
-        image: "bhavya_k_p_general_surgery.jpg",
+        image: "/images/faculties/general-surgery/bhavya_k_p_general_surgery.jpg",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS,MS,DNB",
@@ -1608,7 +1608,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Sujay C",
         designation: "Senior Resident",
-        image: "Dr_Sujay_C.png",
+        image: "/images/faculties/general-surgery/Dr_Sujay_C.png",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS,DNB",
@@ -1616,7 +1616,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Dhananjaya B .M",
         designation: "Senior Resident",
-        image: "Dr_Dhananjaya_B_M.png",
+        image: "/images/faculties/general-surgery/Dr_Dhananjaya_B_M.png",
         email: "",
         joiningDate: "02/03/2026",
         qualifications: "MBBS,MS",
@@ -1624,7 +1624,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Sharanabasappa",
         designation: "Senior Resident",
-        image: "Dr_Sharanabasappa.png",
+        image: "/images/faculties/general-surgery/Dr_Sharanabasappa.png",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS,MS",
