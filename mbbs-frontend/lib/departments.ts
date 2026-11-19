@@ -517,7 +517,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
     hod: {
       name: "Dr. Asharani N",
       designation: "Professor and Head of the Department",
-      image: "Biochem_Dr_Asharani_N.JPG",
+      image: "/images/faculties/biochemistry/Biochem_Dr_Asharani_N.JPG",
       message:
         "Welcome to the Department of Biochemistry….\nBiochemistry forms the foundation of modern medical education, bridging basic science and clinical medicine. It helps students understand the molecular mechanisms underlying health and disease.\nAt Alva’s, we take pride in our well-equipped laboratories, committed faculty, and an academic atmosphere that fosters curiosity, innovation, and meaningful learning, making the study of biochemistry both comprehensive and clinically relevant.\nWe encourage students to participate in research projects, scientific forums, and interdisciplinary activities to broaden their perspectives and deepen their understanding of biomedical science. The department remains focused on continuous improvement, academic integrity, and the holistic development of our students as future medical professionals.\nJoin us in exploring the fascinating world of biochemistry — where curiosity meets discovery and learning leads to innovation.",
       email: "",
@@ -538,7 +538,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Gayathri M. Rao",
         designation: "Professor",
-        image: "Biochem_Dr_Gayathri_M_Rao.jpg",
+        image: "/images/faculties/biochemistry/Biochem_Dr_Gayathri_M_Rao.jpg",
         email: "",
         joiningDate: "03/06/2026",
         qualifications: "M.Sc., Ph.D.",
@@ -554,7 +554,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Shraddha Pattanashetti",
         designation: "Assistant Professor",
-        image: "Biochem_Dr_Shraddha_B_Pattanashetti.png",
+        image: "/images/faculties/biochemistry/Biochem_Dr_Shraddha_B_Pattanashetti.png",
         email: "",
         joiningDate: "02/03/2026",
         qualifications: "MBBS, MD",
@@ -569,7 +569,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. C. R. Raghushaker",
         designation: "Assistant Professor",
-        image: "Biochem_Dr_C_R_Raghushekar.png",
+        image: "/images/faculties/biochemistry/Biochem_Dr_C_R_Raghushekar.png",
         email: "",
         joiningDate: "13/03/2026",
         qualifications: "M.Sc. (Medical Biochemistry), Ph.D.",
@@ -585,7 +585,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Mr. Nagendra K",
         designation: "Demonstrator",
-        image: "Biochem_Dr_Nagendra_K.JPG",
+        image: "/images/faculties/biochemistry/Biochem_Dr_Nagendra_K.JPG",
         email: "",
         joiningDate: "23/03/2026",
         qualifications: "M.Sc.",
@@ -602,7 +602,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Abhishek K M",
         designation: "Tutor",
-        image: "Biochem_Dr_Abhishek_K_M.png",
+        image: "/images/faculties/biochemistry/Biochem_Dr_Abhishek_K_M.png",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS",
@@ -615,7 +615,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Jyothi P V",
         designation: "Tutor",
-        image: "Biochem_Dr_Jyothi_P_V.jpg",
+        image: "/images/faculties/biochemistry/Biochem_Dr_Jyothi_P_V.jpg",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS",
@@ -629,7 +629,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Rakheshpal S D",
         designation: "Tutor",
-        image: "Biochem_Dr_Rakeshpal.png",
+        image: "/images/faculties/biochemistry/Biochem_Dr_Rakeshpal.png",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS",
@@ -642,7 +642,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Shashank M S",
         designation: "Tutor",
-        image: "Biochem_Dr_Shashank_M_S.png",
+        image: "/images/faculties/biochemistry/Biochem_Dr_Shashank_M_S.png",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS",
@@ -655,7 +655,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Arunkumar Karabasappa Byadagi",
         designation: "Tutor",
-        image: "Biochem_Dr_Arun_Kumar.png",
+        image: "/images/faculties/biochemistry/Biochem_Dr_Arun_Kumar.png",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS",
@@ -667,7 +667,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Shreenivas D Madiwal",
         designation: "Tutor",
-        image: "Biochem_Dr_Shrinivas_D_Madiwal.png",
+        image: "/images/faculties/biochemistry/Biochem_Dr_Shrinivas_D_Madiwal.png",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBSS",
@@ -693,7 +693,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Vinitha Aranha",
         designation: "Tutor",
-        image: "",
+        image: "/images/faculties/biochemistry/Vinitha_Aranha_Biochemistry.jpg",
         email: "",
         joiningDate: "",
         qualifications: "",
