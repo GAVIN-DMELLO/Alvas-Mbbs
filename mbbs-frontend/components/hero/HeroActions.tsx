@@ -21,12 +21,12 @@ export const HeroActions = ({ isReady = false }: { isReady?: boolean }) => {
     >
       <Link
         href="/admissions"
-        className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-gradient-to-r from-[#b98b52] to-[#a7773f] px-8 py-3.5 font-display text-[13px] font-bold uppercase tracking-[0.18em] text-[#0b1e36] shadow-[0_14px_30px_-16px_rgba(185,139,82,0.9)] transition-all duration-300 ease-out hover:-translate-y-1 hover:from-[#c99a63] hover:to-[#b98b52] hover:shadow-[0_22px_44px_-16px_rgba(185,139,82,0.95)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#d3ae74] focus-visible:ring-offset-2 focus-visible:ring-offset-black/40"
+        className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-white text-black shadow-[0_12px_28px_-16px_rgba(0,0,0,0.65)] transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-[#fdf9f3] hover:shadow-[0_22px_44px_-18px_rgba(185,139,82,0.55)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#d3ae74] focus-visible:ring-offset-2 focus-visible:ring-offset-black/40 px-8 py-3.5 font-display text-[13px] font-bold uppercase tracking-[0.18em]"
       >
         {/* Light sweep on hover */}
         <span
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/40 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full"
+          className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-[#b98b52]/25 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full"
         />
 
         <span className="relative">Admissions &amp; Aid</span>

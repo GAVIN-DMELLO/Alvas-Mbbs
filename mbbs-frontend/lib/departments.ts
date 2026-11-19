@@ -85,7 +85,8 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Swarna Rekha Raghava Vothesar",
         designation: "Associate Professor",
-        image: "Dr_Swarna_Rekha_Raghava_Vothesar.png",
+        image:
+          "/images/faculties/anaesthesiology/Dr_Swarna_Rekha_Raghava_Vothesar.png",
         email: "",
         joiningDate: "09/01/2026",
         qualifications: "MBBS, DA, DNB",
@@ -109,7 +110,8 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Nilesh Pandurang Dixit",
         designation: "Associate Professor",
-        image: "Dr_Nilesh_Pandurang_Dixit.png",
+        image:
+          "/images/faculties/anaesthesiology/Dr_Nilesh_Pandurang_Dixit.png",
         email: "",
         joiningDate: "02/03/2026",
         qualifications: "MBBS, MD",
@@ -121,7 +123,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Dilip Kumar S N",
         designation: "Assistant Professor",
-        image: "Dr_Dilip_Kumar_S_N.png",
+        image: "/images/faculties/anaesthesiology/Dr_Dilip_Kumar_S_N.png",
         email: "",
         joiningDate: "06/08/2025",
         qualifications: "MBBS, MD",
@@ -133,7 +135,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Venugopala K",
         designation: "Assistant Professor",
-        image: "Dr_Venugopala_K.png",
+        image: "/images/faculties/anaesthesiology/Dr_Venugopal_K.png",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS, MD",
@@ -145,7 +147,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Sujith H M",
         designation: "Assistant Professor",
-        image: "Dr_Sujith_H_M.png",
+        image: "/images/faculties/anaesthesiology/Dr_Sujith_H_M.png",
         email: "",
         joiningDate: "02/03/2026",
         qualifications: "MBBS, MD",
@@ -157,7 +159,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. AV Nagabhushan",
         designation: "Assistant Professor",
-        image: "Dr_AV_Nagabhushan.png",
+        image: "/images/faculties/anaesthesiology/Dr_AV_Nagabhushan.png",
         email: "",
         joiningDate: "01/04/2026",
         qualifications: "MBBS, MD",
@@ -169,7 +171,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Keerthana K",
         designation: "Assistant Professor",
-        image: "Dr_Keerthana_K.png",
+        image: "/images/faculties/anaesthesiology/Dr_Keerthana_K.png",
         email: "",
         joiningDate: "02/03/2026",
         qualifications: "MBBS, MD",
@@ -181,7 +183,8 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Malladihalli Kiran Ashok Kumar",
         designation: "Assistant Professor",
-        image: "Dr_Malladihalli_Kiran_Ashok_Kumar.png",
+        image:
+          "/images/faculties/anaesthesiology/Dr_Malladihalli_Kiran_Ashok_Kumar.png",
         email: "",
         joiningDate: "01/04/2026",
         qualifications: "MBBS, MD",
@@ -193,7 +196,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Nikhila Raj K",
         designation: "Assistant Professor",
-        image: "Dr_Nikhila_Raj_K.png",
+        image: "/images/faculties/anaesthesiology/Dr_Nikhila_Raj_K.png",
         email: "",
         joiningDate: "02/03/2026",
         qualifications: "MBBS, MD",
@@ -205,7 +208,8 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Glenita Reema Pinto",
         designation: "Senior Resident",
-        image: "Anaesth_Dr_Glenita_Reema_Pinto.JPG",
+        image:
+          "/images/faculties/anaesthesiology/Anaesth_Dr_Glenita_Reema_Pinto.JPG",
         email: "",
         joiningDate: "27/01/2026",
         qualifications: "MBBS, MD (Anesthesiology)",
@@ -220,7 +224,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Aiswarya P Suresh",
         designation: "Senior Resident",
-        image: "Dr_Aiswarya_P_Suresh.png",
+        image: "/images/faculties/anaesthesiology/Dr_Aishwarya_Suresh.png",
         email: "",
         joiningDate: "01/12/2025",
         qualifications: "MBBS, MD",
@@ -232,7 +236,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Suresh Kumar K A",
         designation: "Senior Resident",
-        image: "Dr_Suresh_Kumar_K_A.png",
+        image: "/images/faculties/anaesthesiology/Dr_Suresh_Kumar_K_A.png",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS, MD",
@@ -244,7 +248,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Ranjini Shome",
         designation: "Senior Resident",
-        image: "Dr_Ranjini_Shome.png",
+        image: "/images/faculties/anaesthesiology/Dr_Ranjini_Shome.png",
         email: "",
         joiningDate: "02/02/2026",
         qualifications: "MBBS, MD",
@@ -256,7 +260,7 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
       {
         name: "Dr. Poornima G S",
         designation: "Senior Resident",
-        image: "Dr_Poornima_G_S.png",
+        image: "/images/faculties/anaesthesiology/Dr_Poornima_G_S.png",
         email: "",
         joiningDate: "02/03/2026",
         qualifications: "MBBS, MD",
@@ -264,6 +268,40 @@ export const DEPARTMENT_PROFILES: Record<string, DepartmentProfile> = {
         interests: "",
         responsibilities: "",
         memberships: "",
+      },
+      {
+        name: "Dr. Anish Antony D'Silva",
+        designation: "Senior Resident",
+        image: "/images/faculties/anaesthesiology/Dr_Anish_Antony_Dsilva.png",
+        email: "",
+        joiningDate: "30/10/2026",
+        qualifications: "MBBS, MD (Anaesthesiology)",
+        experience:
+          "• Junior Resident – Department of Anaesthesiology, Father Muller Medical College, Mangalore (3 Years)\n• Duty Medical Officer, Goretti Hospital, Udupi (4 months)\n• Duty Medical Officer, Mount Rosary Hospital, Alangar, Moodbidri (8 months)",
+        interests:
+          "General Anaesthesia, Regional Anaesthesia, Labour Analgesia, Difficult airway management, Perioperative Pain Medicine, Critical care, Simulation Based Medical Education",
+        responsibilities:
+          "1. Pre-anaesthetic evaluation and perioperative optimization of surgical patients.\n2. Administration of general, regional and monitored anaesthesia care. Perioperative monitoring, airway management and postoperative patient care.\n3. Management of critically ill patients and participation in emergency resuscitation.\n4. Teaching and clinical training of undergraduate students, postgraduate students and interns.\n5. Participation in departmental academic activities, clinical audits, research and quality improvement initiatives.",
+        achievements:
+          "Presented Poster at Annual State Level Conference – ISACON Karnataka",
+        memberships: "Indian Society of Anaesthesiologists (ISA)",
+      },
+      {
+        name: "Dr. Niranjan Bhat U",
+        designation: "Senior Resident",
+        image:
+          "/images/faculties/anaesthesiology/Dr_Niranjan_Bhat_U_Anaesthesiology.jpg",
+        email: "",
+        joiningDate: "04/11/2026",
+        qualifications: "MBBS, MD",
+        experience:
+          "• Postgraduate Resident, MD Anaesthesiology, A.J. Institute of Medical Sciences & Research Centre, Mangaluru\n(3 Years, 2023–2026)",
+        interests:
+          "Ultrasound-guided regional anaesthesia and peripheral nerve blocks\nAirway management (difficult airway, fibreoptic intubation)\nCritical care and resuscitation\nPerioperative medicine\nTeaching and evidence-based practice",
+        responsibilities:
+          "Perioperative anaesthetic management across surgical specialties\nResuscitation and critical care\nTeaching and training of undergraduate students and interns in airway management, ACLS and BLS",
+        achievements: "Award-winning paper and poster presentations",
+        memberships: "IMA Mangalore",
       },
     ],
   },

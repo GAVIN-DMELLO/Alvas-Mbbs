@@ -81,10 +81,6 @@ export default function AboutCollegePage() {
 
         <div className="mx-auto flex min-h-[80vh] w-full max-w-7xl items-end px-4 pb-20 pt-36 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-amber-300/30 bg-amber-300/10 px-4 py-2 font-mono text-[10px] font-semibold uppercase tracking-[0.3em] text-amber-200 backdrop-blur-sm sm:text-xs">
-              <span className="h-1.5 w-1.5 rounded-full bg-amber-300" />
-              AIMSARC
-            </span>
             <h1 className="max-w-3xl font-display text-5xl font-bold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl">
               About the College
             </h1>
