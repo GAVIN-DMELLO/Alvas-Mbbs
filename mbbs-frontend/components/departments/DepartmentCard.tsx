@@ -20,7 +20,7 @@ export const DepartmentCard = ({ index, name, slug, image }: DepartmentCardProps
         alt=""
         fill
         sizes="(max-width: 640px) 20rem, 22rem"
-        className="object-cover transition-transform duration-500 group-hover:scale-105"
+        className="scale-[1.12] object-cover transition-transform duration-500 group-hover:scale-[1.17]"
       />
       <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#081827] via-[#081827]/70 to-transparent" />
 
