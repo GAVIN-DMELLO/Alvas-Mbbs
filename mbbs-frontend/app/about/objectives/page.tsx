@@ -76,7 +76,7 @@ export default function ObjectivesPage() {
           className="absolute inset-0 -z-10"
         >
           <img
-            src="/banner-1.jpg"
+            src="/aimsarc2.jpg"
             alt="Our Goals & Objectives"
             className="h-full w-full object-cover"
           />

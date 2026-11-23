@@ -63,13 +63,6 @@ const mediaItems: MediaItem[] = [
   },
 ];
 
-const categoryStyles: Record<string, string> = {
-  Admission:
-    "bg-amber-50 text-amber-700 border-amber-200",
-  Event: "bg-sky-50 text-sky-700 border-sky-200",
-  Research: "bg-emerald-50 text-emerald-700 border-emerald-200",
-};
-
 export const NewsSection = () => {
   const shouldReduceMotion = useReducedMotion();
   const [activeMedia, setActiveMedia] = useState(0);
@@ -165,15 +158,7 @@ export const NewsSection = () => {
                     }}
                     className="group cursor-pointer rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-amber-300/60 hover:shadow-[0_18px_45px_-22px_rgba(15,41,66,0.25)] sm:p-7"
                   >
-                    <div className="flex items-center gap-3">
-                      <span
-                        className={`inline-block rounded-md border px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-wider ${
-                          categoryStyles[item.category] ??
-                          "bg-slate-50 text-slate-700 border-slate-200"
-                        }`}
-                      >
-                        {item.category}
-                      </span>
+                    <div>
                       <time className="font-mono text-xs text-slate-500">
                         {item.date}
                       </time>

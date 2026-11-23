@@ -23,7 +23,7 @@ export default function DepartmentsPage() {
         {/* Header */}
         <div className="mb-10">
           <span className="text-[#b98b52] font-bold tracking-[0.25em] text-xs uppercase block mb-3">
-            Academics
+            Academic 
           </span>
           <h1 className="text-4xl md:text-6xl font-serif text-[#142d44] tracking-tight">
             Departments
@@ -33,23 +33,6 @@ export default function DepartmentsPage() {
             Twenty departments across pre-clinical, para-clinical and clinical
             disciplines shape the academic and clinical training at AIMSARC.
           </p>
-        </div>
-
-        {/* Category legend */}
-        <div className="mb-10 flex flex-wrap items-center gap-3">
-          {(Object.keys(CATEGORY_STYLES) as DepartmentCategory[]).map(
-            (category) => (
-              <span
-                key={category}
-                className="inline-flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-slate-500"
-              >
-                <span
-                  className={`h-1.5 w-1.5 rounded-full ${CATEGORY_STYLES[category].dot}`}
-                />
-                {category}
-              </span>
-            ),
-          )}
         </div>
 
         {/* Department cards */}
@@ -72,9 +55,6 @@ export default function DepartmentsPage() {
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0b1f33]/75 via-[#0b1f33]/10 to-transparent" />
-                  <span className="absolute right-6 top-5 text-[11px] font-semibold tabular-nums tracking-[0.12em] text-white/75">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
                 </div>
 
                 <div className="p-6">

@@ -138,7 +138,7 @@ export default function CodeOfConductPage() {
           className="absolute inset-0 -z-10"
         >
           <img
-            src="/banner-1.jpg"
+            src="/aimsarc1.jpg"
             alt="Standards & Conduct"
             className="h-full w-full object-cover"
           />

@@ -137,7 +137,7 @@ export default function AdmissionsPage() {
           className="absolute inset-0 -z-10"
         >
           <img
-            src="/banner-1.jpg"
+            src="/aimsarc3.jpg"
             alt="Admissions"
             className="h-full w-full object-cover"
           />

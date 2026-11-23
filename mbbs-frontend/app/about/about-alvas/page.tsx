@@ -70,7 +70,7 @@ export default function AboutAlvasPage() {
           className="absolute inset-0 -z-10"
         >
           <img
-            src="/banner-5.jpg"
+            src="/banner-4.jpg"
             alt="Alva's campus"
             className="h-full w-full object-cover"
           />

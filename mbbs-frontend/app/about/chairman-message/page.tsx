@@ -47,7 +47,7 @@ export default function ChairmanMessagePage() {
           className="absolute inset-0 -z-10"
         >
           <img
-            src="/banner-4.jpg"
+            src="/about-alvas-campus.jpg"
             alt="Leadership"
             className="h-full w-full object-cover"
           />

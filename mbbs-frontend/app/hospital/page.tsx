@@ -44,12 +44,6 @@ function CardImage({ src, label }: { src: string; label: string }) {
         style={{ backgroundImage: `url(${src})` }}
       />
       <div className="absolute inset-0 bg-gradient-to-t from-[#0b1e36]/70 via-transparent to-transparent" />
-      <div className="absolute inset-x-0 bottom-0 flex items-center gap-2 px-6 pb-5">
-        <span className="h-1.5 w-9 rounded-full bg-[#b98b52]" />
-        <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/85">
-          {label}
-        </span>
-      </div>
     </div>
   );
 }

@@ -69,10 +69,6 @@ export const ImpactStatsSection = () => {
             }}
             className="mx-auto mb-9 max-w-2xl text-center sm:mb-12"
           >
-            <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#234767]/10 bg-[#234767]/5 px-4 py-2 font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-[#234767] sm:text-xs">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#b98b52]" />
-              Alva&apos;s legacy
-            </span>
             <h2
               id="impact-stats-heading"
               className="font-display text-3xl font-bold tracking-tight text-[#142d44] sm:text-4xl lg:text-[2.75rem]"

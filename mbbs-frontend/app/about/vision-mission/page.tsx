@@ -73,27 +73,17 @@ export default function VisionMissionPage() {
                 {/* Top accent bar */}
                 <span className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-[#234767] via-[#b98b52] to-[#234767]" />
 
-                <div className="flex items-start gap-5">
-                  {/* Icon tile */}
-                  <span className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-[#234767] to-[#0b1f33] text-amber-200 shadow-lg">
-                    <svg viewBox="0 0 24 24" fill="none" className="h-7 w-7" aria-hidden>
-                      <path
-                        d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                        strokeLinejoin="round"
-                      />
-                      <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="1.5" />
-                    </svg>
-                  </span>
-                  <div>
-                    <h2 className="font-display text-2xl font-bold text-[#142d44] sm:text-3xl">
-                      Vision
-                    </h2>
-                    <p className="mt-4 text-[15px] leading-8 text-slate-600 sm:text-base sm:leading-9">
-                      &ldquo;{vision}&rdquo;
-                    </p>
-                  </div>
+                <div>
+                  <h2 className="flex items-center gap-3.5 font-display text-2xl font-bold text-[#142d44] sm:text-3xl">
+                    <span
+                      className="h-3 w-3 rounded-full bg-gradient-to-r from-[#234767] to-[#b98b52] shadow-sm ring-4 ring-[#b98b52]/15"
+                      aria-hidden="true"
+                    />
+                    Vision
+                  </h2>
+                  <p className="mt-4 text-[15px] leading-8 text-slate-600 sm:text-base sm:leading-9">
+                    &ldquo;{vision}&rdquo;
+                  </p>
                 </div>
               </article>
             </ScrollReveal>
@@ -104,26 +94,17 @@ export default function VisionMissionPage() {
                 {/* Top accent bar (reverse) */}
                 <span className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-[#b98b52] via-[#234767] to-[#b98b52]" />
 
-                <div className="flex items-start gap-5">
-                  {/* Icon tile */}
-                  <span className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-[#b98b52] to-[#a7773f] text-[#0b1f33] shadow-lg">
-                    <svg viewBox="0 0 24 24" fill="none" className="h-7 w-7" aria-hidden>
-                      <path
-                        d="M12 2l2.4 4.8L20 7.6l-4 3.9.9 5.5L12 14.8 7.1 17l.9-5.5-4-3.9 5.6-.8L12 2z"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </span>
-                  <div>
-                    <h2 className="font-display text-2xl font-bold text-[#142d44] sm:text-3xl">
-                      Mission
-                    </h2>
-                    <p className="mt-4 text-[15px] leading-8 text-slate-600 sm:text-base sm:leading-9">
-                      &ldquo;{mission}&rdquo;
-                    </p>
-                  </div>
+                <div>
+                  <h2 className="flex items-center gap-3.5 font-display text-2xl font-bold text-[#142d44] sm:text-3xl">
+                    <span
+                      className="h-3 w-3 rounded-full bg-gradient-to-r from-[#234767] to-[#b98b52] shadow-sm ring-4 ring-[#b98b52]/15"
+                      aria-hidden="true"
+                    />
+                    Mission
+                  </h2>
+                  <p className="mt-4 text-[15px] leading-8 text-slate-600 sm:text-base sm:leading-9">
+                    &ldquo;{mission}&rdquo;
+                  </p>
                 </div>
               </article>
             </ScrollReveal>

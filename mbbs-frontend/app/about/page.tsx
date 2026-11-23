@@ -72,7 +72,7 @@ export default function AboutCollegePage() {
           className="absolute inset-0 -z-10"
         >
           <img
-            src="/banner-7.jpg"
+            src="/about-campus-day.jpg"
             alt="AIMSARC campus"
             className="h-full w-full object-cover"
           />

@@ -3,13 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 
 type DepartmentCardProps = {
-  index: number;
+  index?: number;
   name: string;
   slug: string;
   image: string;
 };
 
-export const DepartmentCard = ({ index, name, slug, image }: DepartmentCardProps) => {
+export const DepartmentCard = ({ name, slug, image }: DepartmentCardProps) => {
   return (
     <Link
       href={`/departments/${slug}`}
@@ -23,11 +23,6 @@ export const DepartmentCard = ({ index, name, slug, image }: DepartmentCardProps
         className="scale-[1.12] object-cover transition-transform duration-500 group-hover:scale-[1.17]"
       />
       <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#081827] via-[#081827]/70 to-transparent" />
-
-      {/* Department number */}
-      <span className="absolute left-6 top-6 font-mono text-xs font-semibold tracking-[0.25em] text-amber-200">
-        {String(index).padStart(2, "0")}
-      </span>
 
       <div className="relative z-10 p-6">
         <h3 className="font-display text-lg font-semibold leading-snug text-white">
